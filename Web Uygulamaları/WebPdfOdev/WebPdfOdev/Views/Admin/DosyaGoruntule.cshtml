@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebPdfOdev.Models.PdfDokuman>
+
+@{
+    ViewBag.Title = "PdfGoruntule";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.Döküman.AdminDokuman.dosyagoruntule</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.dosyaadi
+        </th>
+        <th>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.dosyaaciklama
+        </th>
+        <th>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.Konusu
+        </th>
+        <th>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.Tarih
+        </th>
+        <th>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.Gönderenkisi
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfAciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfKonusu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfGonderenKisi)
+        </td>
+        
+        <td>
+            @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Düzenle, "DosyaDüzenle", new { id=item.ıd }) |
+            @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Sil, "DosyaSil", new { id=item.ıd }) 
+          
+        </td>
+    </tr>
+}
+
+</table>

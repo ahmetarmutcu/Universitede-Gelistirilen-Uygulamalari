@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ANASAYFA" xml:space="preserve">
+    <value>HOME</value>
+  </data>
+  <data name="DilAyarı" xml:space="preserve">
+    <value>Dil ayarları</value>
+  </data>
+  <data name="DoğruPdfÖnemlidir" xml:space="preserve">
+    <value>Accurate Pdf Is Important</value>
+  </data>
+  <data name="DoğruPdfÖnemlidirbilgi1" xml:space="preserve">
+    <value>Since the use of computers for files, there are different formats. These formats evolve over time and in addition to these new ones.
+
+</value>
+  </data>
+  <data name="DÖKÜMANLAR" xml:space="preserve">
+    <value>DOCUMENTS</value>
+  </data>
+  <data name="EğitiminÖnemi" xml:space="preserve">
+    <value>Importance of education</value>
+  </data>
+  <data name="EğitiminÖnemibilgi" xml:space="preserve">
+    <value>Uneducated people are the ones who are harmed by collecting themselves. The vast majority of crimes in the community are committed by untrained persons. Education in this area should not be limited to just reading ...</value>
+  </data>
+  <data name="HAKKIMIZDA" xml:space="preserve">
+    <value>ABOUT US</value>
+  </data>
+  <data name="hakkımızdaSayfası1" xml:space="preserve">
+    <value>Having set out in 1998 with the principle of "providing world class solutions to its customers by using the latest communication and computer technologies", isimtescil.net has been one of the biggest domain and hosting companies in the world and Turkey in the last 16 years. Since 2010, isimtescil.net has become one of the top 500 IT companies in Turkey, and since its establishment, over 1 million domains have been registered and more than 200 thousand hosting services have been hosted With a team of 45 people, 7/24 support operation continues and R &amp; D policy and its infrastructure investments are managed. In 2013, the first time in Turkey, Turkey has launched a preliminary demand process for new domain extensions, , The most demanding company in Asia and Eastern Europe.</value>
+  </data>
+  <data name="hakkımızdaSayfası2" xml:space="preserve">
+    <value>With a team of 45 people, 7/24 support operation continues and R &amp; D policy and its infrastructure investments are managed by iDefense.net. In 2013, for the first time in Turkey, we initiated the preliminary demand process for new domain extensions and in this process, In Asia and Eastern Europe, the most demanding company has received the title. isimtescil.net is also one of the authorized operators of .tr extensions in Turkey. It has the highest transaction volume among domain registrants with .tr extension. isimtescil.net has the domain management (domain management) automation developed with its own software team. This automation gives users the freedom to record world-class online domains and manage all domain operations from our web-based interface. With the same integrated hosting automation system, the company has the ability to provide hosting service and multi-service management from a single interface. In 2010, the company carried all its hosting infrastructure over the cloud and reached to its customers the best cost / maximum performance measure.</value>
+  </data>
+  <data name="ogretmenpdfgirisi" xml:space="preserve">
+    <value>TEACHER PDF GİRİŞİ</value>
+  </data>
+  <data name="Teknoloji" xml:space="preserve">
+    <value>Technology</value>
+  </data>
+  <data name="Teknolojibilgi" xml:space="preserve">
+    <value>Articles about the development of technology. Before we open up the technology. Technology, a word derived from the words of art and knowing, is one of the most frequently used and most frequently used words in our day ...</value>
+  </data>
+  <data name="TeknolojiniEğitimdekiYeri" xml:space="preserve">
+    <value>Place of Technology in Education</value>
+  </data>
+  <data name="TeknolojiniEğitimdekiYeribilgi" xml:space="preserve">
+    <value>The time we've been living now is the use of technology in every field and in the most efficient way. In particular, education is one of the areas where technology should be used the most. Because the use of technology in education makes it easier to understand, it embodies many aspects ...</value>
+  </data>
+  <data name="ÜyeOl" xml:space="preserve">
+    <value>SIGN UP</value>
+  </data>
+  <data name="İLETİŞİM" xml:space="preserve">
+    <value>CONTACT</value>
+  </data>
+  <data name="DoğruPdfÖnemlidirbilg2" xml:space="preserve">
+    <value>They were created with the aim of making people easier to use and to make sure that they get comfortable with the documents they want. Apart from this, they are also very indispensable for those who want to prepare such files and who want to have a virtual presence as a document.
+
+</value>
+  </data>
+  <data name="DoğruPdfÖnemlidirbilgi3" xml:space="preserve">
+    <value>PDF is one of the extensions that has provided and maintained a large number of different documents since many years. Portable Document Format (PDF) is an English portable document format. Files with this extension are now used by many people. At the same time, official places have a lot of precaution because of their use, and today they are indispensable. One of the most important advantages of PDF files is that they transfer all the fonts used in the original document into the PDF, preserving them as if they were vector objects and images. Another feature is that it takes up much less space than the original document covers.</value>
+  </data>
+  <data name="duyuruaciklama" xml:space="preserve">
+    <value>Announcement Explanation</value>
+  </data>
+  <data name="duyuruadi" xml:space="preserve">
+    <value>Announcement Name</value>
+  </data>
+  <data name="duyurubaslik" xml:space="preserve">
+    <value>Announcements</value>
+  </data>
+  <data name="DuyuruTarihi" xml:space="preserve">
+    <value>Announcement Date</value>
+  </data>
+  <data name="gerekmektedir" xml:space="preserve">
+    <value>is required.</value>
+  </data>
+  <data name="ogrencidosyagirisi" xml:space="preserve">
+    <value>STUDENT FILE ENTRY</value>
+  </data>
+  <data name="ogrencigiris" xml:space="preserve">
+    <value>STUDENT INTRODUCTION</value>
+  </data>
+  <data name="ogrencigirisbilgi" xml:space="preserve">
+    <value>To enter a student entry</value>
+  </data>
+  <data name="ogretmendosyagirisi" xml:space="preserve">
+    <value>TEACHER FILE ENTRY</value>
+  </data>
+  <data name="ogretmengiris" xml:space="preserve">
+    <value>TEACHER INTRODUCTION</value>
+  </data>
+  <data name="ogretmengirisibilgi" xml:space="preserve">
+    <value>To enter a teacher entry</value>
+  </data>
+  <data name="ÜyeOlmanız" xml:space="preserve">
+    <value>Becoming a Member</value>
+  </data>
+  <data name="admingiris" xml:space="preserve">
+    <value>ADMIN INTRODUCTION</value>
+  </data>
+</root>

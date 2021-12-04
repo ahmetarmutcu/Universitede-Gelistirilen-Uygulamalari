@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebPdfOdev.Models.Uye>
+@{
+    ViewBag.Title = "AdminGoster";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.admingoster</h2>
+
+<p style="margin-left:2%">
+    @Html.ActionLink(WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.adminekle, "AdminEkle")
+</p>
+<table class="table" style="margin-left:2%">
+    <tr>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.yetki
+        </th>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Adı
+        </th>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Soyadi
+        </th>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Kullanıcı
+        </th>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Email
+        </th>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Sifre
+        </th>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Sifretekrari
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yetkisi.yetki)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uyeAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uyeSoyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kullanaciadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sifre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SifreTekrarı)
+            </td>
+            <td>
+                @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Düzenle, "AdminDuzenle", new { id = item.uyeİd })
+
+                @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Sil, "AdminSil", new { id = item.uyeİd })
+            </td>
+        </tr>
+    }
+
+</table>
+
+

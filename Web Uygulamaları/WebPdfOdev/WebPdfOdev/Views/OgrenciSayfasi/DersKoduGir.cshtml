@@ -1,0 +1,42 @@
+﻿@model WebPdfOdev.Models.PdfModel
+
+@{
+    ViewBag.Title = "DersKoduGir";
+    Layout = "~/Views/Shared/OgrenciPanel .cshtml";
+}
+
+<h2 style="margin-left:1%">@WebPdfOdev.Resources.OgrenciPaneli.OgrenciSınıfları.derskodugir</h2>
+
+@using (Html.BeginForm())
+{
+    <div style="text-align:center;color:red"><h3><b>@ViewBag.mesaj</b></h3></div>
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.pdfDerskodu, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.pdfDerskodu, new { htmlAttributes = new { @class = "form-control", autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.pdfDerskodu, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.pdfKullanici, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.pdfKullanici, new { htmlAttributes = new { @class = "form-control", autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.pdfKullanici, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@WebPdfOdev.Resources.OgrenciPaneli.OgrenciSınıfları.dersgoster" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

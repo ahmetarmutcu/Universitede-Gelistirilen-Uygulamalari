@@ -1,0 +1,116 @@
+﻿@model IEnumerable<WebPdfOdev.Models.PdfDokuman>
+@{
+    ViewBag.Title = WebPdfOdev.Resources.Home.DÖKÜMANLAR;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<!--
+Template Name: Pesaton
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+
+
+
+
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+
+            <div class="content three_quarter first">
+
+                <!--PORTFOLIO SECTION-->
+                <section id="portfolio">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <h1 style="text-align:center;margin-top:5%">@WebPdfOdev.Resources.Dokumanlar.dokumanbaslik</h1>
+                            </div>
+                        </div>
+                      
+                      @foreach (var item in Model)
+                      {
+                      
+                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                <a href="#@item.ıd" data-toggle="modal">
+                                    <img src="~/img/dokuman/bilim.jpg" class="img-responsive " alt="" />
+                                    <p>@item.pdfAdi</p>
+                                </a>
+                            </div>
+                          
+                       
+                      }
+                    </div>
+@foreach (var item in Model)
+{
+                    <div class="pad-top"></div>
+
+                    <div class="modal fade" id="@item.ıd" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-content">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="modal-body">
+
+                                            <span class="fa fa-scissors fa-3x pull-right" data-dismiss="modal">@WebPdfOdev.Resources.Dokumanlar.kapat</span>
+                                            <hr />
+                                            <h1 style="text-align:center">@WebPdfOdev.Resources.Dokumanlar.pdfsayfasi</h1>
+                                            <br />
+                                            <div class="col-md-4">
+                                                <p style="text-align:center"><img src="~/img/dokuman/bilim.jpg" class="img-responsive " alt="" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p style="float:left">
+                                                   <span>
+                                                    @WebPdfOdev.Resources.Dokumanlar.dosyaadi: @item.pdfAdi<br />
+                                                    @WebPdfOdev.Resources.Dokumanlar.dosyaaciklama: @item.pdfAciklama<br />
+                                                    @WebPdfOdev.Resources.Dokumanlar.dosyakonu: @item.pdfKonusu<br />
+                                                    @WebPdfOdev.Resources.Dokumanlar.dosyatarihi: @item.pdfTarihi<br />
+                                                     @WebPdfOdev.Resources.Dokumanlar.dosyagönderenkisi:@item.pdfGonderenKisi
+                                                    @Html.ActionLink(WebPdfOdev.Resources.Dokumanlar.indirmekısmı, "DownloadFile", new { id = item.ıd })
+                                                    </span>
+                                                </p>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+}
+                </section>
+
+
+            </div>
+
+
+
+            <div class="clear"></div>
+        </main>
+    </div>
+
+
+    <script src="../layout/scripts/jquery.min.js"></script>
+    <script src="../layout/scripts/jquery.backtotop.js"></script>
+    <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    <!-- IE9 Placeholder Support -->
+    <script src="../layout/scripts/jquery.placeholder.min.js"></script>
+    <!-- / IE9 Placeholder Support -->
+</body>
+</html>
+
+
+

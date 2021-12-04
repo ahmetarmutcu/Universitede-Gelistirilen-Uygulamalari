@@ -1,0 +1,80 @@
+﻿@model WebPdfOdev.Models.Uye
+
+@{
+    ViewBag.Title = "OgrenciSil";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.ogrenciSil</h2>
+
+
+<div>
+   
+    <dl class="dl-horizontal" style="margin-left:5%">
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.yetki
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yetkisi.yetki)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Adı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uyeAd)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Soyadi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uyeSoyad)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Kullanıcı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kullanaciadi)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Sifre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sifre)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Sifretekrari
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SifreTekrarı)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin-left:5%">
+            <input type="submit" value="@WebPdfOdev.Resources.Veritabaniİslemleri.Sil" class="btn btn-default" /><b></b>
+            @Html.ActionLink(WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.ogrencigoster, "OgrenciGoster")
+        </div>
+    }
+</div>

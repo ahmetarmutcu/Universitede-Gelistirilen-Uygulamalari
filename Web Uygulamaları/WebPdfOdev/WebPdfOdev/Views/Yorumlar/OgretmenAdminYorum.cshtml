@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "OgretmenAdminYorum";
+    Layout = "~/Views/Shared/OgretmenPanel.cshtml";
+}
+<br /><br />
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<body>
+    <section id="contact" class="contact">
+
+        <div class="container">
+            <div style="margin-left:96px">
+                <div class="col-md-9 col-sm-9">
+                    <div class="head_title text-center wow zoomIn" data-wow-duration="0.5s">
+                        <h2>@WebPdfOdev.Resources.İletisim.ogretmeniletisimsayfasi</h2>
+                        <div class="separetor"></div>
+                        <p>@WebPdfOdev.Resources.İletisim.iletisimbilgi</p><br />
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-left:80px;">
+                <div class="messsage_contant">
+                    <div class="col-md-10 col-sm-10">
+                        <div class="single_message_left wow fadeIn" data-wow-duration="1s">
+                            <form action="#" id="formid">
+
+                                
+
+
+                                <div class="form-group">
+                                    <textarea class="form-control" id=yorum rows="8" autocomplete="off" placeholder="@WebPdfOdev.Resources.İletisim.mesaj"></textarea>
+                                </div>
+
+
+                                <div class="center-content">
+                                    <input type="submit" id="gonder" value="@WebPdfOdev.Resources.İletisim.yorumyapbutton" class="btn btn-lg">
+                                </div>
+
+                                <!--</div>-->
+                            </form>
+                            <!--</div>-->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+    <br /><br />
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/jquery.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#gonder").click(function () {
+                var yorumunuz = $("#yorum").val();
+                
+                $.ajax({
+
+                    url: '/Yorumlar/AdminYorumYap/',
+                    data: { yorum: yorumunuz},
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (data) {
+                        alert("Yorum basariyla gonderildi " + yorumunuz);
+                    }
+
+                });
+            });
+        })
+
+    </script>
+
+</body>
+</html>
+
+

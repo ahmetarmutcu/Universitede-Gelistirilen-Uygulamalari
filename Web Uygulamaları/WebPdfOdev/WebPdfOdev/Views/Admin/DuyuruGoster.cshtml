@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WebPdfOdev.Models.Duyurular>
+
+@{
+    ViewBag.Title = WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.duyurubaslik;
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.duyurubaslik</h2>
+
+<p style="margin-left:1%">
+    @Html.ActionLink(WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.yeniduyuru, "DuyuruEkle")
+</p>
+<table class="table" style="margin-left:1%">
+    <tr>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.Duyuruadi
+        </th>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.duyuruAciklama
+        </th>
+        <th>
+           @WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.duyuruTarihi
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.duyuruadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duyuruAciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duyuruTarihi)
+        </td>
+        <td>
+            @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Düzenle, "DuyuruDuzenle", new { id=item.duyuruid }) |
+          
+            @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Sil, "DuyuruSil", new { id=item.duyuruid })
+        </td>
+    </tr>
+}
+
+</table>

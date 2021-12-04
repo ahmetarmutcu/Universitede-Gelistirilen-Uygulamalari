@@ -1,0 +1,59 @@
+﻿@model WebPdfOdev.Models.Yorum
+
+@{
+    ViewBag.Title = "YorumDetay";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.ogretmendetayyorum</h2>
+
+<div>
+   
+    <dl class="dl-horizontal" style="margin-left:5%">
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.yetki
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yetkisi.yetki)
+        </dd>
+        <dt>
+          @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Adı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uye.uyeAd)
+        </dd>
+
+       
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uyeEmail)
+        </dd>
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.İçerik
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.icerik)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.Tarih
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarihi)
+        </dd>
+
+       
+
+    </dl>
+</div>
+<p style="margin-left:5%">
+   
+    @Html.ActionLink(@WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.ogretmenyorumlarıgor, "YorumlariGör")
+</p>

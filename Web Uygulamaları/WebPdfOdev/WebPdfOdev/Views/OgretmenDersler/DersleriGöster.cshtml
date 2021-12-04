@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebPdfOdev.Models.OgretmenDersleri>
+
+@{
+    ViewBag.Title = "DersleriGöster";
+    Layout = "~/Views/Shared/OgretmenPanel.cshtml";
+}
+<h2 style="text-align:center">@WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.secilendersler</h2>
+<p>
+    @Html.ActionLink(WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.yenidersoluştur, "DersEkle")
+</p>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <!-- Advanced Tables -->
+            <div class="panel panel-default">
+                <div class="panel-heading" >
+                 
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                                <tr>
+                                    <th>@WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.derskodu</th>
+                                    
+                                    <th>@WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.Derssil</th>
+
+                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.derskodu)
+                                        </td>
+                                        <td>
+                                            
+
+                                            @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Sil, "DersSil", new { id = item.id })
+                                        </td>
+                                    </tr>
+                                }
+                            </thead>
+                            <tbody>
+                                <tr class="odd gradeX"></tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>

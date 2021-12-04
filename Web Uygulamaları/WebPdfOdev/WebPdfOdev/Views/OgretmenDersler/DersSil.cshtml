@@ -1,0 +1,46 @@
+﻿@model WebPdfOdev.Models.OgretmenDersleri
+
+@{
+    ViewBag.Title = "DersSil";
+    Layout = "~/Views/Shared/OgretmenPanel.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.Derssil</h2>
+<div>
+    
+    <dl class="dl-horizontal" style="margin-left:5%">
+        <dt>
+          @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Adı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uye.uyeAd)
+        </dd>
+
+        <dt>
+           @WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.derskodu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.derskodu)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Kullanıcı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kullaniciadi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin-left:5%">
+            <input type="submit" value="@WebPdfOdev.Resources.Veritabaniİslemleri.Sil" class="btn btn-default" /> |
+            @Html.ActionLink(WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.derslerigör, "DersleriGöster")
+        </div>
+    }
+</div>

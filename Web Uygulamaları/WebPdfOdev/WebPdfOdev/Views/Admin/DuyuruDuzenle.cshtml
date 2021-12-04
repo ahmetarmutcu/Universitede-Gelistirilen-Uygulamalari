@@ -1,0 +1,53 @@
+﻿@model WebPdfOdev.Models.Duyurular
+
+@{
+    ViewBag.Title = WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.DuyuruDuzenle;
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.DuyuruDuzenle</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.duyuruid)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.duyuruadi, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.duyuruadi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.duyuruadi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.duyuruAciklama, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.duyuruAciklama, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.duyuruAciklama, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.duyuruTarihi, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.duyuruTarihi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.duyuruTarihi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.Kaydetbutton" class="btn btn-default" />@Html.ActionLink(WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.Duyurugöster, "DuyuruGoster")
+            </div>
+        </div>
+    </div>
+}
+
+
+

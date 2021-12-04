@@ -1,0 +1,727 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1473B1FF-5FDD-40F6-A24E-365CE0D29C4F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebPdfOdev</RootNamespace>
+    <AssemblyName>WebPdfOdev</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4-alpha1-00070\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Edi.Web.MvcExtensions, Version=5.2.3.1, Culture=neutral, PublicKeyToken=8a476f025a04049b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Edi.Web.MvcExtensions.5.2.3.1\lib\net45\Edi.Web.MvcExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\Admin\bootstrap.min.css" />
+    <Content Include="Content\css\Admin\dataTables.bootstrap4.css" />
+    <Content Include="Content\css\Admin\font-awesome.min.css" />
+    <Content Include="Content\css\Admin\sb-admin.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\fontawesome-4.5.0.min.css" />
+    <Content Include="Content\css\ForumGiriscss.css" />
+    <Content Include="Content\css\framework.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\404HATA.jpg" />
+    <Content Include="img\dokuman\bilim.jpg" />
+    <Content Include="img\hakkimizda.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\mod\mod1.jpg" />
+    <Content Include="img\mod\mod2.jpg" />
+    <Content Include="img\mod\mod3.jpg" />
+    <Content Include="img\mod\pdf.jpg" />
+    <Content Include="img\mod\uyeOl.jpg" />
+    <Content Include="img\ogrenci.jpg" />
+    <Content Include="img\ogretmen.jpg" />
+    <Content Include="img\s1.jpg" />
+    <Content Include="img\s2.jpg" />
+    <Content Include="img\s3.jpg" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\Admin\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\Admin\Chart.min.js" />
+    <Content Include="Scripts\Admin\dataTables.bootstrap4.js" />
+    <Content Include="Scripts\Admin\jquery.dataTables.js" />
+    <Content Include="Scripts\Admin\jquery.easing.min.js" />
+    <Content Include="Scripts\Admin\jquery.min.js" />
+    <Content Include="Scripts\Admin\sb-admin-charts.min.js" />
+    <Content Include="Scripts\Admin\sb-admin-datatables.min.js" />
+    <Content Include="Scripts\Admin\sb-admin.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\bootstrap.js" />
+    <Content Include="Scripts\js\custom.js" />
+    <Content Include="Scripts\js\jquery.js" />
+    <Content Include="Scripts\js\metisMenu.min.js" />
+    <Content Include="Scripts\js\morris-data.js" />
+    <Content Include="Scripts\js\morris.min.js" />
+    <Content Include="Scripts\js\raphael.min.js" />
+    <Content Include="Scripts\js\sb-admin-2.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Home\Hakkimizda.cshtml" />
+    <Content Include="Views\Home\Anasayfa.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OgrenciAdminİletisimController.cs" />
+    <Compile Include="Controllers\OgrenciSayfasiController.cs" />
+    <Compile Include="Controllers\OgretmenDerslerController.cs" />
+    <Compile Include="Controllers\DosyaYonetimController.cs" />
+    <Compile Include="Controllers\UyeController.cs" />
+    <Compile Include="Controllers\YorumlarController.cs" />
+    <Compile Include="Controllers\OgretmenAdminİletisimController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Duyurular.cs" />
+    <Compile Include="Models\OgretmenDersleri.cs" />
+    <Compile Include="Models\PdfDokuman.cs" />
+    <Compile Include="Models\PdfModel.cs" />
+    <Compile Include="Models\PdfWeb.cs" />
+    <Compile Include="Models\Uye.cs" />
+    <Compile Include="Models\Yetkisi.cs" />
+    <Compile Include="Models\Yorum.cs" />
+    <Compile Include="Models\ZiyaretciYorumu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AdminPaneli\Duyurular\Duyurular.en.Designer.cs">
+      <DependentUpon>Duyurular.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AdminPaneli\Duyurular\Duyurular.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Duyurular.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AdminPaneli\Menüler.en.Designer.cs">
+      <DependentUpon>Menüler.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AdminPaneli\Menüler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menüler.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AdminPaneli\Uyeler\Uyeler.en.Designer.cs">
+      <DependentUpon>Uyeler.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AdminPaneli\Uyeler\Uyeler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Uyeler.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AdminPaneli\Yorumlar\Yorumlar.en.Designer.cs">
+      <DependentUpon>Yorumlar.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AdminPaneli\Yorumlar\Yorumlar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Yorumlar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Dokumanlar.en.Designer.cs">
+      <DependentUpon>Dokumanlar.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Dokumanlar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dokumanlar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Döküman\AdminDokuman.en.Designer.cs">
+      <DependentUpon>AdminDokuman.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Döküman\AdminDokuman.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminDokuman.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Footer.en.Designer.cs">
+      <DependentUpon>Footer.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Footer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Footer.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Girisler\Uye.en.Designer.cs">
+      <DependentUpon>Uye.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Girisler\Uye.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Uye.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Home.en.Designer.cs">
+      <DependentUpon>Home.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Home.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Mesajlar.en.Designer.cs">
+      <DependentUpon>Mesajlar.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Mesajlar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mesajlar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Modeller\Dokuman.en.Designer.cs">
+      <DependentUpon>Dokuman.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Modeller\Dokuman.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dokuman.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Modeller\DosyaYönetim.en.Designer.cs">
+      <DependentUpon>DosyaYönetim.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Modeller\DosyaYönetim.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DosyaYönetim.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Modeller\Duyurular.en.Designer.cs">
+      <DependentUpon>Duyurular.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Modeller\Duyurular.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Duyurular.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Modeller\Uye.en.Designer.cs">
+      <DependentUpon>Uye.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Modeller\Uye.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Uye.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\OgrenciPaneli\Menüler.en.Designer.cs">
+      <DependentUpon>Menüler.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\OgrenciPaneli\Menüler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menüler.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\OgrenciPaneli\OgrenciSınıfları.en.Designer.cs">
+      <DependentUpon>OgrenciSınıfları.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\OgrenciPaneli\OgrenciSınıfları.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OgrenciSınıfları.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\OgretmenPaneli\DosyaEkle.en.Designer.cs">
+      <DependentUpon>DosyaEkle.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\OgretmenPaneli\DosyaEkle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DosyaEkle.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\OgretmenPaneli\DosyaSinif.en.Designer.cs">
+      <DependentUpon>DosyaSinif.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\OgretmenPaneli\DosyaSinif.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DosyaSinif.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\OgretmenPaneli\Menuler.en.Designer.cs">
+      <DependentUpon>Menuler.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\OgretmenPaneli\Menuler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menuler.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UyeOl.en.Designer.cs">
+      <DependentUpon>UyeOl.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\UyeOl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UyeOl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Veritabaniİslemleri.en.Designer.cs">
+      <DependentUpon>Veritabaniİslemleri.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Veritabaniİslemleri.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Veritabaniİslemleri.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\İletisim.en.Designer.cs">
+      <DependentUpon>İletisim.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\İletisim.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>İletisim.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Layout - Admin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Uye\UyeOlustur.cshtml" />
+    <Content Include="Views\Uye\OgretmenGiris.cshtml" />
+    <Content Include="Views\Uye\Cikis.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Uye\OgrenciGiris.cshtml" />
+    <Content Include="Views\Admin\OgretmenGoster.cshtml" />
+    <Content Include="Views\Admin\OgretmenDuzenle.cshtml" />
+    <Content Include="Views\Admin\OgretmenSil.cshtml" />
+    <Content Include="Views\Admin\OgretmenEkle.cshtml" />
+    <Content Include="Views\Admin\OgrenciEkle.cshtml" />
+    <Content Include="Views\Admin\OgrenciGoster.cshtml" />
+    <Content Include="Views\Admin\OgrenciSil.cshtml" />
+    <Content Include="Views\Admin\OgrenciDuzenle.cshtml" />
+    <Content Include="Views\Admin\DuyuruEkle.cshtml" />
+    <Content Include="Views\Admin\DuyuruGoster.cshtml" />
+    <Content Include="Views\Admin\DuyuruDuzenle.cshtml" />
+    <Content Include="Views\Admin\DuyuruSil.cshtml" />
+    <Content Include="Views\Home\İletisim.cshtml" />
+    <Content Include="Views\Yorumlar\ZiyaretciYorumları.cshtml" />
+    <Content Include="Views\Yorumlar\ZiyaretciDetayları.cshtml" />
+    <Content Include="Views\Yorumlar\ZiyaretciSil.cshtml" />
+    <Content Include="Views\Shared\OgretmenPanel.cshtml" />
+    <Content Include="Views\OgretmenDersler\DersEkle.cshtml" />
+    <Content Include="Views\OgretmenDersler\DersleriGöster.cshtml" />
+    <Content Include="Views\Yorumlar\OgretmenAdminYorum.cshtml" />
+    <Content Include="Views\OgretmenAdminİletisim\YorumlariGör.cshtml" />
+    <Content Include="Views\OgretmenAdminİletisim\YorumDetay.cshtml" />
+    <Content Include="Views\OgretmenAdminİletisim\YorumSil.cshtml" />
+    <Content Include="Views\Shared\OgrenciPanel .cshtml" />
+    <Content Include="Views\OgrenciSayfasi\OgrenciAnasayfa.cshtml" />
+    <Content Include="Views\Yorumlar\OgrenciAdminYorum.cshtml" />
+    <Content Include="Views\OgrenciAdminİletisim\YorumDetay.cshtml" />
+    <Content Include="Views\OgrenciAdminİletisim\YorumlariGör.cshtml" />
+    <Content Include="Views\OgrenciAdminİletisim\YorumSil.cshtml" />
+    <Content Include="Views\Uye\AdminGiris.cshtml" />
+    <Content Include="Views\Home\Download.cshtml" />
+    <Content Include="Views\DosyaYonetim\DosyaEkle.cshtml" />
+    <Content Include="Views\OgretmenDersler\DersSil.cshtml" />
+    <Content Include="Views\OgretmenDersler\OgretmenAnasayfası.cshtml" />
+    <Content Include="Views\Admin\DosyaEkle.cshtml" />
+    <Content Include="Views\OgrenciSayfasi\SecilenDersler.cshtml" />
+    <Content Include="Views\OgrenciSayfasi\DersKoduGir.cshtml" />
+    <Content Include="Views\DosyaYonetim\DosyaEklenecekDersler.cshtml" />
+    <Content Include="Views\DosyaYonetim\OgretmenDosyalari.cshtml" />
+    <Content Include="Views\DosyaYonetim\OgretmenDosyaDüzenle.cshtml" />
+    <Content Include="Views\DosyaYonetim\OgretmenDosyaSil.cshtml" />
+    <Content Include="Views\DosyaYonetim\DokumanlarDosyaEkle.cshtml" />
+    <Content Include="Views\Admin\DosyaGoruntule.cshtml" />
+    <Content Include="Views\Admin\DosyaDüzenle.cshtml" />
+    <Content Include="Views\Admin\DosyaSil.cshtml" />
+    <Content Include="Views\Admin\AdminGoster.cshtml" />
+    <Content Include="Views\Admin\AdminEkle.cshtml" />
+    <Content Include="Views\Admin\AdminSil.cshtml" />
+    <Content Include="Views\Admin\AdminDuzenle.cshtml" />
+    <Content Include="Views\Uye\HataSayfasi.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\Dokuman\" />
+    <Folder Include="Content\Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AdminPaneli\Duyurular\Duyurular.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Duyurular.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AdminPaneli\Duyurular\Duyurular.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Duyurular.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AdminPaneli\Menüler.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menüler.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AdminPaneli\Menüler.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menüler.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AdminPaneli\Uyeler\Uyeler.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Uyeler.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AdminPaneli\Uyeler\Uyeler.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Uyeler.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AdminPaneli\Yorumlar\Yorumlar.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Yorumlar.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AdminPaneli\Yorumlar\Yorumlar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Yorumlar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Dokumanlar.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dokumanlar.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Dokumanlar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dokumanlar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Döküman\AdminDokuman.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdminDokuman.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Döküman\AdminDokuman.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdminDokuman.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Footer.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Footer.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Footer.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Footer.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Girisler\Uye.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Uye.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Girisler\Uye.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Uye.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Home.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Home.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Mesajlar.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mesajlar.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Mesajlar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mesajlar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Modeller\Dokuman.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dokuman.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Modeller\Dokuman.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Dokuman.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Modeller\DosyaYönetim.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DosyaYönetim.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Modeller\DosyaYönetim.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DosyaYönetim.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Modeller\Duyurular.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Duyurular.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Modeller\Duyurular.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Duyurular.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Modeller\Uye.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Uye.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Modeller\Uye.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Uye.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgrenciPaneli\Menüler.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menüler.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgrenciPaneli\Menüler.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menüler.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgrenciPaneli\OgrenciSınıfları.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OgrenciSınıfları.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgrenciPaneli\OgrenciSınıfları.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OgrenciSınıfları.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgretmenPaneli\DosyaEkle.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DosyaEkle.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgretmenPaneli\DosyaEkle.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DosyaEkle.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgretmenPaneli\DosyaSinif.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DosyaSinif.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgretmenPaneli\DosyaSinif.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DosyaSinif.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgretmenPaneli\Menuler.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menuler.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OgretmenPaneli\Menuler.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menuler.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\UyeOl.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UyeOl.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\UyeOl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UyeOl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Veritabaniİslemleri.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Veritabaniİslemleri.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Veritabaniİslemleri.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Veritabaniİslemleri.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\İletisim.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>İletisim.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\İletisim.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>İletisim.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56767</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56767/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "OgrenciAdminYorum";
+    Layout = "~/Views/Shared/OgrenciPanel .cshtml";
+}
+<br /><br />
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<body>
+    <section id="contact" class="contact">
+
+        <div class="container">
+            <div style="margin-left:96px">
+                <div class="col-md-9 col-sm-9">
+                    <div class="head_title text-center wow zoomIn" data-wow-duration="0.5s">
+                        <h2>OGRENCİ İLETİŞİM SAYFASI</h2>
+                        <div class="separetor"></div>
+                        <p>Yöneticiye mesaj atmak için Lütfen mail adresinizi giriniz.</p><br />
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-left:80px;">
+                <div class="messsage_contant">
+                    <div class="col-md-10 col-sm-10">
+                        <div class="single_message_left wow fadeIn" data-wow-duration="1s">
+                            <form action="#" id="formid">
+
+
+
+
+                                <div class="form-group">
+                                    <textarea class="form-control" id=yorum rows="8" autocomplete="off" placeholder="Mesaj"></textarea>
+                                </div>
+
+
+                                <div class="center-content">
+                                    <input type="submit" id="gonder" value="YORUM YAP" class="btn btn-lg">
+                                </div>
+
+                                <!--</div>-->
+                            </form>
+                            <!--</div>-->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+    <br /><br />
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/jquery.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#gonder").click(function () {
+                var yorumunuz = $("#yorum").val();
+
+                $.ajax({
+
+                    url: '/Yorumlar/AdminYorumYap/',
+                    data: { yorum: yorumunuz},
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (data) {
+                        alert("Yorum basariyla gonderildi " + yorumunuz);
+                    }
+
+                });
+            });
+        })
+
+    </script>
+
+</body>
+</html>
+

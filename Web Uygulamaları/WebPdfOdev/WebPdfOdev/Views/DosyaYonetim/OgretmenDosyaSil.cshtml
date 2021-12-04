@@ -1,0 +1,66 @@
+﻿@model WebPdfOdev.Models.PdfModel
+
+@{
+    ViewBag.Title = "OgretmenPdfSil";
+    Layout = "~/Views/Shared/OgretmenPanel.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.ogretmendosyasil</h2>
+<div style="text-align:center;color:red"><h6><b>@ViewBag.mesaj</b></h6></div>
+
+    <dl class="dl-horizontal" style="margin-left:2%">
+        <dt>
+           @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.dosyaadi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfAdi)
+        </dd>
+
+        
+
+        <dt>
+            @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.Açıklama
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfAciklama)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Uyeler.Uyeler.Kullanıcı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfKullanici)
+        </dd>
+
+       
+
+        <dt>
+            @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.Derskodu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfDerskodu)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.Tarih
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfTarihi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color"  style="margin-left:2%">
+            <input type="submit" value=" @WebPdfOdev.Resources.Veritabaniİslemleri.Sil" class="btn btn-default" /> 
+            
+        </div>
+    }
+

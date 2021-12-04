@@ -1,0 +1,57 @@
+﻿@model WebPdfOdev.Models.PdfModel
+
+@{
+    ViewBag.Title = "PdfEkle";
+    Layout = "~/Views/Shared/OgretmenPanel.cshtml";
+}
+
+<h2 style=" text-align:center">@WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.Dosyaekle</h2>
+
+@using (Html.BeginForm("DosyaEkle", "DosyaYonetim", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div style="text-align:center;color:red"><h6><b>@ViewBag.mesaj</b></h6></div>
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+       
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.dosyaadi
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.pdfAdi, new { htmlAttributes = new { @class = "form-control", autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.pdfAdi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.Dosyaseciniz
+            </div>
+            <div class="col-md-10">
+              <div class="form-group">
+                  <input type="file" name="file" />
+             </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.Açıklama
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.pdfAciklama, new { htmlAttributes = new { @class = "form-control", autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.pdfAciklama, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+       
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.Dosyaekle" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

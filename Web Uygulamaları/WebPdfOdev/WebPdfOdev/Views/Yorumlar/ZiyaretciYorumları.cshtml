@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WebPdfOdev.Models.ZiyaretciYorumu>
+
+@{
+    ViewBag.Title = "ZiyaretciYorumları";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.ziyaretciYorumlaribaslik</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.zAdi
+        </th>
+        <th>
+           @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.zemail
+        </th>
+        <th>
+           @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.Tarih
+        </th>
+        <th>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.İçerik
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ziyaretciAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ziyaretciEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tarih)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.İcerik)
+        </td>
+        <td>
+           
+            @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Detaylar, "ZiyaretciDetayları", new { id=item.ziyaretciid }) 
+            @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Sil, "ZiyaretciSil", new { id=item.ziyaretciid })
+        </td>
+    </tr>
+}
+
+</table>

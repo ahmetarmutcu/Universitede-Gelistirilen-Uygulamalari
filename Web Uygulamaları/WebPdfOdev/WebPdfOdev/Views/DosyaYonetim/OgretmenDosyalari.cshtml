@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebPdfOdev.Models.PdfModel>
+
+@{
+    ViewBag.Title = "OgretmenPdfleri";
+    Layout = "~/Views/Shared/OgretmenPanel.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.ogretmendosyalaribaslik</h2>
+
+<table class="table" style="margin-left:2%">
+    <tr>
+        <th>
+       @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.dosyaadi
+        </th>
+      
+        <th>
+         @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.Açıklama
+        </th>
+       
+        <th>
+           @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.Derskodu
+        </th>
+        <th>
+           @WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.dosyayükleyen
+        </th>
+        <th>@WebPdfOdev.Resources.OgretmenPaneli.DosyaEkle.dosyaislemleri</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfAdi)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfAciklama)
+        </td>
+        
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfDerskodu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfKullanici)
+        </td>
+        <td>
+            @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Düzenle, "OgretmenDosyaDüzenle", new { id=item.ıd }) |
+           
+            @Html.ActionLink(WebPdfOdev.Resources.Veritabaniİslemleri.Sil, "OgretmenDosyaSil", new { id=item.ıd })
+        </td>
+    </tr>
+}
+
+</table>

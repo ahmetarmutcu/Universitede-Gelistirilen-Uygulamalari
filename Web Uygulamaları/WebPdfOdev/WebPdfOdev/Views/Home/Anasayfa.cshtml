@@ -1,0 +1,175 @@
+﻿@model IEnumerable<WebPdfOdev.Models.Duyurular>
+@{
+    ViewBag.Title = WebPdfOdev.Resources.Home.ANASAYFA;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <!--/.NAVBAR END-->
+
+    <section id="home" class="text-center">
+
+        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="item active">
+
+                    <img src="~/img/s1.jpg" alt="" />
+                    <div class="carousel-caption">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/img/s2.jpg" alt="" />
+                    <div class="carousel-caption ">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/img/s3.jpg" alt="" />
+                    <div class="carousel-caption ">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/img/s3.jpg" alt="" />
+                    <div class="carousel-caption ">
+
+                    </div>
+                </div>
+            </div>
+
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example" data-slide-to="1"></li>
+                <li data-target="#carousel-example" data-slide-to="2"></li>
+            </ol>
+        </div>
+
+    </section>
+    <!--/.SLIDESHOW END-->
+
+
+    <section id="intro">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+
+                    <div class="row text-center pad-row  ">
+                        <div class="col-md-4 col-sm-4 ">
+                            <a href='@Url.Action("OgretmenGiris", "Uye")'>
+                                <img class="img-circle" src="~/img/ogretmen.jpg" alt="" />
+                            </a>
+
+                            <h3><strong>@WebPdfOdev.Resources.Home.ogretmendosyagirisi</strong> </h3>
+                            <p>
+                                @WebPdfOdev.Resources.Home.ogretmengirisibilgi<br /><a href='@Url.Action("UyeOlustur", "Uye")'><b>@WebPdfOdev.Resources.Home.ÜyeOlmanız</b></a> @WebPdfOdev.Resources.Home.gerekmektedir.
+                            </p>
+
+                            <button type="button" onclick="location.href='@Url.Action("OgretmenGiris", "Uye")';return false;" class="btn btn-primary">@WebPdfOdev.Resources.Home.ogretmengiris</button>
+                        </div>
+                        <div class="col-md-4 col-sm-4 ">
+                            <a href='@Url.Action("OgrenciGiris", "Uye")'>
+                                <img class="img-circle" src="~/img/ogrenci.jpg" alt="" />
+                            </a>
+
+                            <h3><strong>@WebPdfOdev.Resources.Home.ogrencidosyagirisi</strong> </h3>
+                            <p>
+                                @WebPdfOdev.Resources.Home.ogrencigirisbilgi<br /><a href='@Url.Action("UyeOlustur", "Uye")'> <b>@WebPdfOdev.Resources.Home.ÜyeOlmanız</b></a> @WebPdfOdev.Resources.Home.gerekmektedir.
+                            </p>
+                            <button type="button" onclick="location.href='@Url.Action("OgrenciGiris", "Uye")';return false;" class="btn btn-primary">@WebPdfOdev.Resources.Home.ogrencigiris</button>
+                        </div>
+                        <br /><br />
+                        <div class="col-md-4 col-sm-4">
+                            <div class="alert alert-success">
+                                <div class="skill-name"><b>@WebPdfOdev.Resources.Home.duyurubaslik</b></div>
+                               
+                                @foreach (var item in Model)
+                                {
+                                    <div style="text-align:center;background-color:red;color:black" >
+                                       @WebPdfOdev.Resources.Home.duyuruadi: @item.duyuruadi<br />
+                                        @WebPdfOdev.Resources.Home.duyuruaciklama: @item.duyuruAciklama<br />
+                                       @WebPdfOdev.Resources.Home.DuyuruTarihi: @item.duyuruTarihi
+                                    </div>
+                                    <br />
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <br /><br />
+    <div class="wrapper row3">
+        <section class="hoc container clear">
+
+            <div class="group">
+                <article class="one_third first">
+                    <a href="#"><img class="btmspace-30" src="~/img/mod/mod3.jpg" alt=""></a><br /><br />
+                    <h4 class="nospace font-x1"><b>@WebPdfOdev.Resources.Home.EğitiminÖnemi</b></h4>
+                    <p>@WebPdfOdev.Resources.Home.EğitiminÖnemibilgi</p>
+                </article>
+                <article class="one_third">
+                    <a href="#"><img class="btmspace-30" src="~/img/mod/mod2.jpg" alt=""></a>
+                    <h4 class="nospace font-x1"><b>@WebPdfOdev.Resources.Home.Teknoloji </b></h4>
+                    <p>@WebPdfOdev.Resources.Home.Teknolojibilgi</p>
+
+                </article>
+                <article class="one_third">
+                    <a href="#"><img class="btmspace-30" src="~/img/mod/mod1.jpg" alt=""></a>
+                    <h4 class="nospace font-x1"><b>@WebPdfOdev.Resources.Home.TeknolojiniEğitimdekiYeri </b></h4>
+                    <p>@WebPdfOdev.Resources.Home.TeknolojiniEğitimdekiYeribilgi&hellip;</p>
+
+                </article>
+            </div>
+
+        </section>
+    </div>
+    <br /><br />
+
+    <section id="about" class="sections3">
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="about-wrapper">
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="about-content text-left">
+                            <h4><b>@WebPdfOdev.Resources.Home.DoğruPdfÖnemlidir</b></h4>
+                            <p>@WebPdfOdev.Resources.Home.DoğruPdfÖnemlidirbilgi1</p>
+
+                            <p>@WebPdfOdev.Resources.Home.DoğruPdfÖnemlidirbilg2</p>
+
+                            <p>@WebPdfOdev.Resources.Home.DoğruPdfÖnemlidirbilgi3</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="about-photo">
+
+                            <img src="~/img/mod/pdf.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /container -->
+    </section>
+    <br /><br />
+</body>
+
+</html>
+

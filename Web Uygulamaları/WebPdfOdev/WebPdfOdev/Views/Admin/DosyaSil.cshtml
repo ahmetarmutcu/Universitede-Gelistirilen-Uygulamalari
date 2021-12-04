@@ -1,0 +1,64 @@
+﻿@model WebPdfOdev.Models.PdfDokuman
+
+@{
+    ViewBag.Title = "PdfSil";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.Döküman.AdminDokuman.dosyasil</h2>
+
+    <dl class="dl-horizontal" style="margin-left:2%">
+        <dt>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.dosyaadi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfAdi)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.dosyaaciklama
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfAciklama)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.Konusu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfKonusu)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.Tarih
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfTarihi)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.Döküman.AdminDokuman.Gönderenkisi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pdfGonderenKisi)
+        </dd>
+
+       
+       
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin-left:2%">
+            <input type="submit" value="@WebPdfOdev.Resources.Döküman.AdminDokuman.dosyasil" class="btn btn-default" />
+           
+        </div>
+    }
+

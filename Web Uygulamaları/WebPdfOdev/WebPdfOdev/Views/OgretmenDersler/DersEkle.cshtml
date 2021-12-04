@@ -1,0 +1,38 @@
+﻿@model WebPdfOdev.Models.OgretmenDersleri
+
+@{
+    ViewBag.Title = "DersEkle";
+    Layout = "~/Views/Shared/OgretmenPanel.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.derseklebutton</h2>
+
+@using (Html.BeginForm())
+{
+    <div style="text-align:center;color:red"><h6><b>@ViewBag.mesaj</b></h6></div>
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                @WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.derskodu
+                </div>
+               
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.derskodu, new { htmlAttributes = new { @class = "form-control", autocomplete = "off" } })
+                    @Html.ValidationMessageFor(model => model.derskodu, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@WebPdfOdev.Resources.OgretmenPaneli.DosyaSinif.derseklebutton" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+

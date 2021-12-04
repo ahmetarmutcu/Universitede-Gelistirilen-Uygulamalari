@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebPdfOdev.Models.PdfModel>
+
+@{
+    ViewBag.Title = "SecilenDersler";
+    Layout = "~/Views/Shared/OgrenciPanel .cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.OgrenciPaneli.OgrenciSınıfları.derskodundakidosyalar</h2>
+<div style="margin-top:2%">
+
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+          @WebPdfOdev.Resources.OgrenciPaneli.OgrenciSınıfları.dosyaadi
+        </th>
+        
+        <th>
+            @WebPdfOdev.Resources.OgrenciPaneli.OgrenciSınıfları.dosyaaciklama
+        </th>
+        <th>
+            @WebPdfOdev.Resources.OgrenciPaneli.OgrenciSınıfları.Gonderenkisi
+        </th>
+       
+        <th>
+            @WebPdfOdev.Resources.OgrenciPaneli.OgrenciSınıfları.dosyayuklemetarihi
+        </th>
+        <th>
+            @WebPdfOdev.Resources.OgrenciPaneli.OgrenciSınıfları.dosyaindirme
+
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfAdi)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfAciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfKullanici)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfTarihi)
+        </td>
+      <td>
+           @Html.ActionLink(WebPdfOdev.Resources.OgrenciPaneli.OgrenciSınıfları.indir, "DownloadFile", new { id = item.ıd })
+      </td>
+    </tr>
+}
+
+</table>

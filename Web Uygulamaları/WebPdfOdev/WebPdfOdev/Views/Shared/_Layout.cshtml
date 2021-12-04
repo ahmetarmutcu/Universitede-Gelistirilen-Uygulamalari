@@ -1,0 +1,124 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>@ViewBag.Title</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLE CSS -->
+
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="~/Content/css/fontawesome-4.5.0.min.css" rel="stylesheet" />
+    <link href="~/Content/css/framework.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href='@Url.Action("Anasayfa", "Home")'>
+                    <img class="img-circle" src="~/img/logo.png" alt="" />
+                </a>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink(WebPdfOdev.Resources.Home.ANASAYFA, "Anasayfa", "Home")</li>
+                    <li>@Html.ActionLink(WebPdfOdev.Resources.Home.HAKKIMIZDA, "Hakkimizda", "Home")</li>
+                    <li>@Html.ActionLink(WebPdfOdev.Resources.Home.DÖKÜMANLAR, "Download","Home")</li>
+                    <li>@Html.ActionLink(WebPdfOdev.Resources.Home.ÜyeOl, "UyeOlustur", "Uye")</li>
+                    <li>@Html.ActionLink(WebPdfOdev.Resources.Home.İLETİŞİM, "İletisim", "Home")</li>
+                    
+                </ul>
+               
+            
+            </div>
+            
+
+               @Html.ActionLink("Türkce", "Anasayfa", "Home", new { LanguageAbbrevation = "tr" }, null)|
+
+                @Html.ActionLink("English", "Anasayfa", "Home", new { LanguageAbbrevation = "en" }, null)
+           
+        </div>
+    </div>
+    <div>
+        <div style="margin-top:8%">
+            @RenderBody()
+        </div>
+
+
+    </div>
+
+
+    <!--footer-->
+    <section id="footer-sec">
+
+        <div class="container">
+            <div class="row  pad-bottom">
+                <div class="col-md-4">
+                    <br /><br />
+                    <h4> @Html.ActionLink("ADMİN", "AdminGiris", "Uye")</h4>
+                    <p>
+                       @WebPdfOdev.Resources.Footer.footerMesaj
+                     
+                    </p>
+                    <!---- <a href="#">read more</a>-->
+                </div>
+                <div class="col-md-4">
+                    <br /><br />
+                    <h4> <strong>@WebPdfOdev.Resources.Footer.sosyalMedya</strong> </h4>
+                    <p style="margin-left:20%">
+                        <a href="https://www.facebook.com/?ref=tn_tnmn"><i class="fa fa-facebook-square fa-3x"></i></a>
+                       
+                        <a href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=AddSession"><i class="fa fa-google-plus-square fa-3x"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <br /><br />
+                    <h4> <strong>@WebPdfOdev.Resources.Footer.adminiletisim</strong> </h4>
+                    <p>
+                         @WebPdfOdev.Resources.Footer.adminiletisimbilgi1<br />
+                        @WebPdfOdev.Resources.Footer.adminiletisimbilgi2 <br />
+                        
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <script src="~/Scripts/js/jquery.js"></script>
+    <
+    <!-- BOOTSTRAP SCRIPTS script src="~/Scripts/js/jquery-1.10.2.js"></script> -->
+
+    <script src="~/Scripts/js/bootstrap.js"></script>
+    <!-- CUSTOM SCRIPTS  -->
+
+    <script src="~/Scripts/js/custom.js"></script>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
+
+
+

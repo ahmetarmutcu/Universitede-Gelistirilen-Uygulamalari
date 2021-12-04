@@ -1,0 +1,50 @@
+﻿@model WebPdfOdev.Models.ZiyaretciYorumu
+
+@{
+    ViewBag.Title = "ZiyaretciDetayları";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.ziyaretciDetaylar</h2>
+
+<div>
+    
+    <dl class="dl-horizontal" style="margin-left:5%">
+        <dt>
+           @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.zAdi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ziyaretciAdi)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.zemail
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ziyaretciEmail)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.Tarih
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.İçerik
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İcerik)
+        </dd>
+
+    </dl>
+</div>
+<p style="margin-left:5%">
+    
+    @Html.ActionLink(WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.ziyaretciyorumlarıgoster, "ZiyaretciYorumları")
+</p>

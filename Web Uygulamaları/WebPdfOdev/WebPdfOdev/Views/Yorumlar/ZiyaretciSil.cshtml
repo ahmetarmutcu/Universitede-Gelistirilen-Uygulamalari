@@ -1,0 +1,55 @@
+﻿@model WebPdfOdev.Models.ZiyaretciYorumu
+
+@{
+    ViewBag.Title = "ZiyaretciSil";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.ziyaretciSil</h2>
+
+
+   
+    <dl class="dl-horizontal" style="margin-left:5%">
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.zAdi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ziyaretciAdi)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.zemail
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ziyaretciEmail)
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.Tarih
+        </dt>
+
+        <dd>
+             @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.zAdi
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.zemail
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İcerik)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin-left:5%">
+            <input type="submit" value="@WebPdfOdev.Resources.Veritabaniİslemleri.Sil" class="btn btn-default" /> |
+            @Html.ActionLink(WebPdfOdev.Resources.AdminPaneli.Yorumlar.Yorumlar.ziyaretciyorumlarıgoster    , "ZiyaretciYorumları")
+        </div>
+    }
+</div>

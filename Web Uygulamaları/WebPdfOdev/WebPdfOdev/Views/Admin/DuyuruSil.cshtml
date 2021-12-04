@@ -1,0 +1,48 @@
+﻿@model WebPdfOdev.Models.Duyurular
+
+@{
+    ViewBag.Title = WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.DuyuruSil;
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
+
+<h2 style="text-align:center">@WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.DuyuruSil</h2>
+
+
+<div>
+    
+    <dl class="dl-horizontal" style="margin-left:7%">
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.Duyuruadi
+        </dt>
+
+        <dd>
+            @WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.duyuruAciklama
+        </dd>
+
+        <dt>
+            @WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.duyuruTarihi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duyuruAciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duyuruTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duyuruTarihi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin-left:7%">
+            <input type="submit" value="@WebPdfOdev.Resources.Veritabaniİslemleri.Sil   " class="btn btn-default" />
+            @Html.ActionLink(WebPdfOdev.Resources.AdminPaneli.Duyurular.Duyurular.Duyurugöster, "DuyuruGoster")
+        </div>
+    }
+</div>
