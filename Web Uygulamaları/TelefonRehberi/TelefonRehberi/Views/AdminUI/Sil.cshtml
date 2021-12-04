@@ -1,0 +1,83 @@
+﻿@model TelefonRehberi.Models.Calisanlar
+
+@{
+    ViewBag.Title = "Sil";
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+}
+
+<h2 style="text-align:center">Çalışan Sil</h2>
+
+
+<div>
+  
+    <dl class="dl-horizontal" style="margin-left:3%">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KullaniciAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KullaniciAdi)
+        </dd>
+
+       
+        <dt>
+            Departman Bölümü
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departman.departmanadi)
+        </dd>
+
+        <dt>
+            Durumu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yonetici.yonetici1)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color" style="margin-left:3%">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Geri Dön", "Index")
+        </div>
+    }
+</div>

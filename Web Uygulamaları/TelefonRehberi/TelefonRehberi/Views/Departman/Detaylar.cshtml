@@ -1,0 +1,67 @@
+﻿@model IEnumerable<TelefonRehberi.Models.Calisanlar>
+
+@{
+    ViewBag.Title = "Detaylar";
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+}
+@foreach (var item in Model)
+{
+<h2 style="text-align:center">@Html.DisplayFor(modelItem => item.Departman.departmanadi) Departmani Çalişanları</h2>
+}
+
+<table class="table">
+    <tr>
+        <th>
+           Departman Adi
+        </th>
+        <th>
+           Durumu
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KullaniciAdi)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departman.departmanadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yonetici.yonetici1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Soyadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KullaniciAdi)
+        </td>
+        
+        
+    </tr>
+}
+
+</table>

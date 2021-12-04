@@ -1,0 +1,76 @@
+﻿@model IEnumerable<TelefonRehberi.Models.Calisanlar>
+
+@{
+    ViewBag.Title = "Goster";
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+}
+
+<h2 style="text-align:center">Şirket Çalışanları</h2>
+
+<p  style="margin-left:1%">
+    @Html.ActionLink("Yeni Çalışan Ekle", "YeniCalisanEkle")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Departman
+        </th>
+        <th>
+           Durumu
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KullaniciAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </th>
+        <th>İşlemler</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departman.departmanadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yonetici.yonetici1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Soyadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KullaniciAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sifre)
+        </td>
+        <td>
+            @Html.ActionLink("Duzenle", "Duzenle", new { id=item.id }) 
+            @Html.ActionLink("Detaylar", "Detaylar", new { id=item.id }) 
+            @Html.ActionLink("Sil", "Sil", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

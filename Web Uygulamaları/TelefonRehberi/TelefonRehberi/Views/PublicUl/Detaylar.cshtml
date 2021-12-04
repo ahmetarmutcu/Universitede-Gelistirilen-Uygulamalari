@@ -1,0 +1,78 @@
+﻿@model TelefonRehberi.Models.Calisanlar
+
+@{
+    ViewBag.Title = "Detaylar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-left:10%">Detaylar</h2>
+
+<div>
+    
+    <dl class="dl-horizontal" style="margin-top:1%">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyadi)
+        </dd>
+      
+       
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KullaniciAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KullaniciAdi)
+
+        </dd>
+        <dt>
+            Departmanı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departman.departmanadi)
+        </dd>
+
+        <dt>
+            Durumu 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yonetici.yonetici1)
+        </dd>
+
+    </dl>
+</div>
+<p style="margin-left:10%">
+    
+    @Html.ActionLink("Geri Dön", "Anasayfa")
+</p>

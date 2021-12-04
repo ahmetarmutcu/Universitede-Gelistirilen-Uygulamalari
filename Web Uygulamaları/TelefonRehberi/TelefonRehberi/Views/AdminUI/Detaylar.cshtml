@@ -1,0 +1,82 @@
+﻿@model TelefonRehberi.Models.Calisanlar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+}
+
+<h2 style="text-align:center">Çalışan Detayları</h2>
+
+<div>
+    
+    <dl class="dl-horizontal" style="margin-left:5%">
+      
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KullaniciAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KullaniciAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sifre)
+        </dd>
+        <dt>
+            Departman Bölümü
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departman.departmanadi)
+        </dd>
+
+        <dt>
+            Durumu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yonetici.yonetici1)
+        </dd>
+    </dl>
+</div>
+<p style="margin-left:5%">
+    @Html.ActionLink("Düzenle", "Duzenle", new { id = Model.id }) |
+    @Html.ActionLink("Geriye Dön", "Index")
+</p>

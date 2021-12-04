@@ -1,0 +1,41 @@
+﻿@model IEnumerable<TelefonRehberi.Models.Calisanlar>
+
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Telefon Numaraları</h2>
+
+<table class="table" style="margin-left:5%;margin-top:2%">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Adi)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </th>
+        <th>Detaylar</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Adi)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+        <td>
+           
+            @Html.ActionLink("Detaylar", "Detaylar", new { id=item.id }) 
+        
+        </td>
+    </tr>
+}
+
+</table>
