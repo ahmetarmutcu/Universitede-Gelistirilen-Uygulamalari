@@ -1,0 +1,56 @@
+﻿@model Yolculuk.Models.TBL_SEHIRDISITUR
+
+@{
+    ViewBag.Title = "ŞEHİR DIŞI TUR SİL";
+    Layout = "~/Views/Template/Admin_Template.cshtml";
+}
+
+<h2 style="text-align:center;color:red">ŞEHİR DIŞI TUR SİLME</h2>
+
+<div style="margin-left:5%">
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <p>SEÇİLEN İL</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TBL_ILADLARI.il_adi)
+        </dd>
+
+        <dt>
+            <p>RESİM BASLİK</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.baslik)
+        </dd>
+
+        <dt>
+            <p>SLİDER BİLGİ</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slider_bilgi)
+        </dd>
+
+        <dt>
+            <p>RESİM YOL</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slider_resim)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Goster", "Goster")
+        </div>
+    }
+</div>

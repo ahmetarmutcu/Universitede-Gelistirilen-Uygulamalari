@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Yolculuk.Models.TBL_ILADLARI>
+
+@{
+    ViewBag.Title = "ŞEHİR DIŞI RESİMLERİNİ GÖR";
+    Layout = "~/Views/Template/Admin_Template.cshtml";
+}
+
+<h2 style="text-align:center;color:red">Şehir Dışı Resimleri</h2>
+
+<p>
+    @Html.ActionLink("Yeni Resim", "Ekle")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <p>BAŞLIK</p>
+        </th>
+        <th>
+            <p>ANA RESİM</p>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.il_adi)
+        </td>
+        <td>
+           <img src="~/Content/img/hizmetler/SehirDisiTur/Anaresimler/@item.slider_anaresim" height="75" width="75" />
+        </td>
+        <td>
+            @Html.ActionLink("Sil", "Sil", new { id=item.il_id })
+        </td>
+    </tr>
+}
+
+</table>

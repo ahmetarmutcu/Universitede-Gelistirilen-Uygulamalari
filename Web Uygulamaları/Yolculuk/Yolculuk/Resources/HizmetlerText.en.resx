@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BUSINESS_TANSFER" xml:space="preserve">
+    <value>BUSINESS TANSFER</value>
+  </data>
+  <data name="BUSINESS_TANSFER_bilgi_1" xml:space="preserve">
+    <value>Business transfers such as the transfer of documents to banks, banks, customs offices and offices are carried out in our Private Transfer Services unit.</value>
+  </data>
+  <data name="BUSINESS_TANSFER_bilgi_2" xml:space="preserve">
+    <value>In the direction of our guests' requests, the whole visit plan is strictly kept secret.</value>
+  </data>
+  <data name="ISTANBUL_ATATURK_HAVAALANİ" xml:space="preserve">
+    <value>İSTANBUL ATATÜRK VİP TRANSFER</value>
+  </data>
+  <data name="ISTANBUL_ATATURK_HAVAALANİ_bilgi_1" xml:space="preserve">
+    <value>Night or night day.We have a professional staff from you or your guests from where you are</value>
+  </data>
+  <data name="ISTANBUL_ATATURK_HAVAALANİ_bilgi_2" xml:space="preserve">
+    <value>We can help you to carry your suitcases without the parking lot, parking lot, traffic stress and tiredness, and you are welcomed and lucky on the most practical way from the airport. So you are the fastest way to adrese or airport where you want to go to a professional service without a friend.</value>
+  </data>
+  <data name="ISTANBUL_TUR_HIZMETLERI" xml:space="preserve">
+    <value>İSTANBUL TOUR SERVICES</value>
+  </data>
+  <data name="ISTANBUL_TUR_HIZMETLERI_bilgi_1" xml:space="preserve">
+    <value>We are introducing Istanbul, which the whole world admires, some of them are annoyed, some of whom write poems and songs for him, with the difference of AYSEREN TRUZES to your guests, we show the most beautiful places of the city without traffic parking problems</value>
+  </data>
+  <data name="ISTANBUL_TUR_HIZMETLERI_bilgi_2" xml:space="preserve">
+    <value>Some of the places you can visit in Istanbul with AYSEREN TOURISM tour services are listed below</value>
+  </data>
+  <data name="ISTANBUL_YENİ_VIP_TRANSFER" xml:space="preserve">
+    <value>ISTANBUL NEW AIRPORT VİP TRANSFER</value>
+  </data>
+  <data name="ISTANBUL_YENİ_VIP_TRANSFER_bilgi_1" xml:space="preserve">
+    <value>Night or night day.We have a professional staff from you or your guests from where you are</value>
+  </data>
+  <data name="ISTANBUL_YENİ_VIP_TRANSFER_bilgi_2" xml:space="preserve">
+    <value>We can help you to carry your suitcases without the parking lot, parking lot, traffic stress and tiredness, and you are welcomed and lucky on the most practical way from the airport. So you are the fastest way to adrese or airport where you want to go to a professional service without a friend.</value>
+  </data>
+  <data name="Istanbu_SABIHA_GOKCEN_HAVAALANİ" xml:space="preserve">
+    <value>İSTANBUL SABİHA GÖKÇEN VİP TRANSFER</value>
+  </data>
+  <data name="Istanbu_SABIHA_GOKCEN_HAVAALANİ_bilgi_1" xml:space="preserve">
+    <value>Night or night day.We have a professional staff from you or your guests from where you are</value>
+  </data>
+  <data name="Istanbu_SABIHA_GOKCEN_HAVAALANİ_bilgi_2" xml:space="preserve">
+    <value>We can help you to carry your suitcases without the parking lot, parking lot, traffic stress and tiredness, and you are welcomed and lucky on the most practical way from the airport. So you are the fastest way to adrese or airport where you want to go to a professional service without a friend.</value>
+  </data>
+  <data name="ozel_gunler_icin_dugunhizmeti" xml:space="preserve">
+    <value>VIP SERVICE FOR SPECIAL DAYS</value>
+  </data>
+  <data name="ozel_gunler_icin_dugunhizmeti_bilgi_1" xml:space="preserve">
+    <value>If you want to experience the comfort of a hotel room comfortably to make your most unique day unique, you can find solutions with our exclusive luxury VIP Mercedes Vito vehicles, each one different from the others.</value>
+  </data>
+  <data name="ozel_gunler_icin_dugunhizmeti_bilgi_2" xml:space="preserve">
+    <value>You can say no to a comfortable and safe bride car with a special driver who will reduce your stress on special occasions such as weddings, engagement, wedding shopping, bride picking, henna night, circumcision wedding. VİP bride can be comfortably traveled comfortably other people besides groom and groom. get rid of it with a phone.</value>
+  </data>
+  <data name="ozel_soforlu_vip_transfer" xml:space="preserve">
+    <value>VIP TRANSFER WITH SPECIAL OPERATOR</value>
+  </data>
+  <data name="ozel_soforlu_vip_transfer_bilgi_1" xml:space="preserve">
+    <value>Are you looking for a comfortable and enjoyable trip? Say hello to V.I.P travels with Mercedes Vito!</value>
+  </data>
+  <data name="ozel_soforlu_vip_transfer_bilgi_2" xml:space="preserve">
+    <value>We offer you the opportunity to make a professional trip within our transfer service with VIP vehicles. The moment you need it, we are just a phone call or a click away! By selecting the tool you want; you can go to concerts, events, hotel, matches or airports in the direction of private transfer services with the Vip vehicles we have provided for you. Our references to our past services are a guarantee of the service we offer you.</value>
+  </data>
+  <data name="ozel_soforlu_vip_transfer_bilgi_3" xml:space="preserve">
+    <value>We offer professional solutions for your airport or hotel transfers with our special transfer services with Vip vehicles that we offer to you 24 hours a day, 7 days a week. Expert and experienced staff are working to meet your needs in the best way possible. Our customer representatives can ask you any questions you may have through our website, you can contact us for a reservation cancellation or change quickly. You can benefit from the transfer service in many regions of Turkey.</value>
+  </data>
+  <data name="sehir_disi_tur_hizmeti" xml:space="preserve">
+    <value>CITY TOUR SERVICE</value>
+  </data>
+  <data name="sehir_disi_tur_hizmeti_bilgi" xml:space="preserve">
+    <value>We are introducing Istanbul, which the whole world admires, some of them are annoyed, some of whom write poems and songs for him, with the difference of AYSEREN TRUZES to your guests, we show the most beautiful places of the city without traffic parking problems</value>
+  </data>
+</root>

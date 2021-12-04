@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Yolculuk.Models.TBL_SLİDER>
+
+@{
+    ViewBag.Title = "Slider";
+    Layout = "~/Views/Template/Admin_Template.cshtml";
+}
+
+<h2 style="color:red;text-align:center">Slider</h2>
+
+<p>
+    @Html.ActionLink("Yeni Resim", "Ekleme")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.buyuk_baslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kısa_baslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resim_yolu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.buyuk_baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kısa_baslik)
+        </td>
+        <td>
+            <img src="~/Content/img/slider/@item.resim_yolu" width="75" height="75" />
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Duzenle", new { id=item.id }) |
+            @Html.ActionLink("Sil", "Sil", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

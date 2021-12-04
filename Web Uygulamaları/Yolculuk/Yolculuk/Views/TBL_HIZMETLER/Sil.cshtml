@@ -1,0 +1,46 @@
+﻿@model Yolculuk.Models.TBL_HIZMETLER
+
+@{
+    ViewBag.Title = "Sil";
+    Layout = "~/Views/Template/Admin_Template.cshtml";
+}
+
+<h2 style="text-align:center;color:red">HİZMET SİL</h2>
+
+<div style="margin-left:5%">
+    <dl class="dl-horizontal">
+        <dt>
+            BAŞLIK
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.baslik)
+        </dd>
+
+        <dt>
+           RESİM
+        </dt>
+
+        <dd>
+           <img src="~/Content/img/hizmetler/HizmetlerAnasayfa/@Model.resimadi" style="width:50PX;height:50px" />
+        </dd>
+
+        <dt>
+          YÖNLENDİRELECEK SAYFA
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resimyonlendirme)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="SİL" class="btn btn-default" /> |
+            @Html.ActionLink("Tüm Hizmetler", "Hizmetler")
+        </div>
+    }
+</div>

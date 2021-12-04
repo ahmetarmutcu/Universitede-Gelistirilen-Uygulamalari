@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Yolculuk.Models.TBL_SEHIRDISITUR>
+
+@{
+    ViewBag.Title = "SEHİR DIŞI TUR";
+    Layout = "~/Views/Template/Admin_Template.cshtml";
+}
+
+<h2 style="text-align:center;color:red">ŞEHİR DIŞI TUR</h2>
+
+<p>
+    @Html.ActionLink("Yeni Tur", "Ekle")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <p class="control-label col-md-2">SEÇİLEN İL</p>
+        </th>
+        <th>
+            <p class="control-label col-md-2">RESİM BAŞLIK</p>
+        </th>
+        <th>
+            <p class="control-label col-md-2">BİLGİ</p>
+        </th>
+        <th>
+            <p class="control-label col-md-2">RESİM </p>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TBL_ILADLARI.il_adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.slider_bilgi)
+        </td>
+        <td>
+            <img src="~/Content/img/hizmetler/SehirDisiTur/@item.slider_resim" width="45" height="45" />
+        </td>
+        <td>
+            @Html.ActionLink("Sil", "Sil", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

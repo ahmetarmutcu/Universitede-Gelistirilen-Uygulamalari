@@ -1,0 +1,40 @@
+﻿@model Yolculuk.Models.TBL_ILADLARI
+
+@{
+    ViewBag.Title = "ŞEHİR DIŞI RESİM";
+    Layout = "~/Views/Template/Admin_Template.cshtml";
+}
+
+<h2 style="text-align:center;color:red">Şehir DIŞI Tur Resim Ekle</h2>
+
+@using (Html.BeginForm("Ekle", "TBL_ILADLARI", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <p class = "control-label col-md-2">RESİM BAŞLIK</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.il_adi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.il_adi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p class="control-label col-md-2">RESİM YOL</p>
+            <div class="col-md-10">
+              <input type="file" name="file" />
+                @Html.ValidationMessageFor(model => model.slider_anaresim, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Ekle" class="btn btn-default" />||@Html.ActionLink("ŞEHİR DIŞI RESİMLERİNİ GÖR", "Goster")
+            </div>
+        </div>
+    </div>
+}
+

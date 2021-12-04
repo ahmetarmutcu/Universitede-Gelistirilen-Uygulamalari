@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Yolculuk.Models.TBL_HIZMETLER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Template/Admin_Template.cshtml";
+}
+
+<h2 style="text-align:center;color:red">HİZMETLERİMİZ</h2>
+
+<p>
+    @Html.ActionLink("Yeni Hizmet Ekle", "Ekle")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <p>BAŞLIK</p>
+        </th>
+        <th>
+            <p>RESİM</p>
+        </th>
+        <th>
+            <p>RESİM YÖNLENDİRELECEK SAYFA</p>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td>
+        <td>
+            <img src="~/Content/img/hizmetler/HizmetlerAnasayfa/@item.resimadi" style="width:50px;height:50px"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resimyonlendirme)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Duzenle", new { id=item.id }) |
+            @Html.ActionLink("Sil", "Sil", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

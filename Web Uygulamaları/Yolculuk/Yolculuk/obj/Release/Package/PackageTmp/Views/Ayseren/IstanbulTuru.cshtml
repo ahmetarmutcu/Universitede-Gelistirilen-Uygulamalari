@@ -1,0 +1,122 @@
+﻿@model IEnumerable<Yolculuk.Models.TBL_ISTANBULTURU>
+@{
+    ViewBag.Title = "IstanbulTuru";
+    Layout = "~/Views/Template/Ayseren_Hizmet_Template.cshtml";
+}
+
+<div class="single-blog-img">
+        <img src="~/Content/img/hizmetler/HizmetlerAnasayfa/istanbul_tur.png" style="width:100%;height:350px" alt="">
+</div>
+<div class="blog-text">
+    <h3 style="margin-top:1%;">
+        @Yolculuk.Resources.HizmetlerText.ISTANBUL_TUR_HIZMETLERI
+    </h3>
+    <p>
+        <b>
+            @Yolculuk.Resources.HizmetlerText.ISTANBUL_TUR_HIZMETLERI_bilgi_1
+        </b>
+    </p>
+    <p> @Yolculuk.Resources.HizmetlerText.ISTANBUL_TUR_HIZMETLERI_bilgi_2</p>
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <ul>
+                <li>
+                    <i class="fa fa-check"></i>Sultan Ahmet Cami
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Boğaziçi Köprüsü
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Hipodrom,İstanbul
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Topkapı Müzesi
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Topkapı Sarayı
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Marmara denizi
+                </li>
+              
+            </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <ul>
+                <li>
+                    <i class="fa fa-check"></i>İstanbul Arkeoloji Müzesi
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Beylerbeyi Sarayı
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>İstanbul Teleferik
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Kapalı Çarşı
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Rümeli Hisarı
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Ortaköy Cami
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Eminönü
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <ul>
+                <li>
+                    <i class="fa fa-check"></i>Bebek Sahili
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Dolmabahçe Sarayı
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Çamlıca tepesi
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Nişantaşı
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Taksim
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Panorama 1453
+                </li>
+                <li>
+                    <i class="fa fa-check"></i>Kalenderhane Camii
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="awesome-project-1 fix">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        </div>
+    </div>
+    <div class="awesome-project-content">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 col-sm-4 col-xs-12 photo">
+                <div class="single-awesome-project">
+                    <div class="awesome-img">
+                        <img src="~/Content/img/hizmetler/SehirTuru/@item.resimadi" alt="" />
+                        <div class="add-actions text-center">
+                            <div class="project-dec">
+
+                                <a class="venobox" data-gall="myGallery" href="~/Content/img/hizmetler/SehirTuru/@item.resimadi">
+                                    <h4>@item.baslik</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

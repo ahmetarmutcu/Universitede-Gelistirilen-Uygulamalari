@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Yolculuk.Models.TBL_HIZMETLER>
+@{
+    ViewBag.Title = "Hizmetlerimiz";
+    Layout = "~/Views/Template/Ayseren_Hizmet_Template.cshtml";
+}
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="section-headline text-center">
+                    <h2>@Yolculuk.Resources.AnaText.HİZMETLERİMİZ</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="awesome-project-1 fix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>
+            </div>
+            <div class="awesome-project-content">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-6 col-sm-6 col-xs-12 photo">
+                        <div class="single-awesome-project">
+                            <div class="awesome-img">
+                                <img src="~/Content/img/hizmetler/HizmetlerAnasayfa/@item.resimadi" alt="" style="height:300px;width:500px" />
+                                <div class="add-actions text-center">
+                                    <div class="project-dec">
+                                        <a href="@item.resimyonlendirme">
+                                                <h4>@item.baslik</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>

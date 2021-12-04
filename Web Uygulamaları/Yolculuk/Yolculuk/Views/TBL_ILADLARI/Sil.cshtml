@@ -1,0 +1,39 @@
+﻿@model Yolculuk.Models.TBL_ILADLARI
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Template/Admin_Template.cshtml";
+}
+
+<h2 style="text-align:center;color:red">SLİDER ANA RESİM SİL</h2>
+
+<div style="margin-left:5%">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           <p>BAŞLIK</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.il_adi)
+        </dd>
+
+        <dt>
+            <p>ANA RESİM</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.slider_anaresim)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Slider ana resimlerini gör", "Goster")
+        </div>
+    }
+</div>

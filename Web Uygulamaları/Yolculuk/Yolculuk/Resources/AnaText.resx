@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ANASAYFA" xml:space="preserve">
+    <value>ANASAYFA</value>
+  </data>
+  <data name="Business_Transfer" xml:space="preserve">
+    <value>BUSINESS TRANSFER</value>
+  </data>
+  <data name="calisma_saatlerimiz" xml:space="preserve">
+    <value>Çalışma Saatlerimiz</value>
+  </data>
+  <data name="Dugun_hizmetlerimiz" xml:space="preserve">
+    <value>DÜĞÜN HİZMETLERİMİZ</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="footer_baslik" xml:space="preserve">
+    <value>HOŞGELDİNİZ AYSEREN TRUZİM SEYAHAT ACENTASINA</value>
+  </data>
+  <data name="footer_bilgi" xml:space="preserve">
+    <value>AYSEREN truzim transfer olarak her zaman müşterilerimize konforlu,huzurlu,rahat bir yolculuk yapmalarını sağlamaktır.</value>
+  </data>
+  <data name="HAKKIMIZDA" xml:space="preserve">
+    <value>HAKKIMIZDA</value>
+  </data>
+  <data name="Hakkimizda_bilgi_1" xml:space="preserve">
+    <value>Tamamen kalite ve müşteri memnuniyeti kriterleri çerçevesinde sunulan AYSEREN TRANSFER Araç Hizmetlerinde, hizmetinize sunduğumuz araçlarımız yüksek kalite standartlarında donatılmıştır.</value>
+  </data>
+  <data name="Hakkimizda_bilgi_2" xml:space="preserve">
+    <value>Araçlarımızın kapasitesi dört ve sekiz kişiliktir. AYSEREN TRANSFER araçlarında geçireceğiniz yolculukla unutulmayacak zevki yaşayacaksınız.</value>
+  </data>
+  <data name="Hakkimizda_bilgi_3" xml:space="preserve">
+    <value>AYSEREN TRANSFER Araç Hizmetlerinde hizmetinizde olacak personelimiz, kadromuzun en seçkin şoförlerinden seçilmiş olup, hizmetinizde hiçbir detayı göz ardı etmeyecek, müşterilerimize "kusursuz hizmet" sunacaklardır.</value>
+  </data>
+  <data name="Hakkimizda_bilgi_4" xml:space="preserve">
+    <value>Yerli ve yabancı tüm ziyaretçilerimizin ulaşım sorunları ile karşılaşmamaları, güvenli ve doğru güzergahlarla sizi rahat ettirmek için tüm imkanlarımızı seferber ediyoruz. Yurtiçi ve yurtdışı gezilerinizde, organizasyonlarınızda, deneyimli personelimizle, size uygun araçlarımızla hizmetinizdeyiz. Ulaşımda yaşanan zorluklar, günümüzün en önemli sorunlarındandır. Toplu halde seyahat etmek bireyler için gidilecek yere ulaşmak birkaç vasıta değiştirmek zorunda kalınması yorucu olmanın yanı sıra ekonomik anlamda da külfettir.</value>
+  </data>
+  <data name="Hakkimizda_bilgi_5" xml:space="preserve">
+    <value>AYSEREN TRANSFER olarak gerçekleştirdiğimiz her işe aynı heyecan, istek ve pozitif enerjiyle yaklaşıyoruz. Hiç kaybetmek istemediğimiz amatör, bir o kadar da azimli ruhu canlı tutmaya gayret ediyoruz. Hizmet verdiğimiz tüm marka ve kuruluşların dinamiklerini, kültürünü ve hassasiyetlerini benimseyip bu nüanslara uygun servis vermek için kendimizi geliştiriyoruz.</value>
+  </data>
+  <data name="HİZMETLERİMİZ" xml:space="preserve">
+    <value>HİZMETLERİMİZ</value>
+  </data>
+  <data name="iletisim_baslik" xml:space="preserve">
+    <value>İLETİŞİM BİLGİLERİ</value>
+  </data>
+  <data name="Istanbul_AtaturkHavaaalani" xml:space="preserve">
+    <value>İSTANBUL ATATÜRK HAVAALANI VİP TRANSFER</value>
+  </data>
+  <data name="Istanbul_sabihagokcen_havaalani" xml:space="preserve">
+    <value>İSTANBUL SABİHA GÖKCEN VİP TRANSFER</value>
+  </data>
+  <data name="Istanbul_Tur_Hızmetleri" xml:space="preserve">
+    <value>İSTANBUL TUR HİZMETLERİ</value>
+  </data>
+  <data name="Menuler" xml:space="preserve">
+    <value>MENÜLER</value>
+  </data>
+  <data name="ozel_soforlu_mercedesvito_kiralama" xml:space="preserve">
+    <value>ÖZEL ŞÖFÖRLÜ MERCEDES VİTO KİRALAMA</value>
+  </data>
+  <data name="Telefon" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="TRANSFER" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="İLETİŞİM" xml:space="preserve">
+    <value>İLETİŞİM</value>
+  </data>
+  <data name="Şoforlu_luks_arackiralama" xml:space="preserve">
+    <value>ŞÖFÖRLÜ LÜKS ARAÇ KİRALAMA</value>
+  </data>
+  <data name="Ozel_soforlu_transfer" xml:space="preserve">
+    <value>ÖZEL ŞOFÖRLÜ VİP TRANSFER</value>
+  </data>
+  <data name="Sehir_disi_turu" xml:space="preserve">
+    <value>ŞEHİR DIŞI TURU</value>
+  </data>
+  <data name="yeni_havaalani_transfer" xml:space="preserve">
+    <value>YENİ HAVAALANI VİP TRANSFER</value>
+  </data>
+  <data name="Gunluk_Geziler" xml:space="preserve">
+    <value>Günlük Geziler</value>
+  </data>
+  <data name="Haftalik_Turlar" xml:space="preserve">
+    <value>Haftalık Turlar</value>
+  </data>
+  <data name="Saatlik_Transfer" xml:space="preserve">
+    <value>Saatlik Transfer</value>
+  </data>
+  <data name="Busines_Transfer" xml:space="preserve">
+    <value>Business Transfer</value>
+  </data>
+</root>

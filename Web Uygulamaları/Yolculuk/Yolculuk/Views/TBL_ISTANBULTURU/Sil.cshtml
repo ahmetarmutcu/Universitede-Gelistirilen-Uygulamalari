@@ -1,0 +1,39 @@
+﻿@model Yolculuk.Models.TBL_ISTANBULTURU
+
+@{
+    ViewBag.Title = "Sil";
+    Layout = "~/Views/Template/Admin_Template.cshtml";
+}
+
+<h2 style="text-align:center;color:red">İSTANBUL TUR RESİM SİL</h2>
+
+<div style="margin-left:5%">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            BAŞLIK
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.baslik)
+        </dd>
+
+        <dt>
+            RESİM
+        </dt>
+
+        <dd>
+            <img src="~/Content/img/hizmetler/SehirTuru/@Model.resimadi" style="width:100px;height:100px" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="SİL" class="btn btn-default" /> |
+            @Html.ActionLink("İSTANBUL TUR RESİMLERİ", "IstanbulTuru")
+        </div>
+    }
+</div>

@@ -1,0 +1,106 @@
+﻿@model Yolculuk.Models.ViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Template/Ayseren_Template.cshtml";
+}
+<div id="home" class="slider-area">
+    <div class="bend niceties preview-2">
+        <div id="ensign-nivoslider" class="slides">
+            @foreach (var item in Model.TBL_SLİDER)
+            {
+                <img src="~/Content/img/slider/@item.resim_yolu" alt="" title="#slider-direction-@item.id" />
+
+            }
+
+        </div>
+        @foreach (var item1 in Model.TBL_SLİDER)
+        {
+            <div id="slider-direction-@item1.id" class="slider-direction slider-one">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="slider-content">
+                                <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
+                                    <a href="@item1.resim_yonlendirme">
+                                        <h1 class="title2">@item1.buyuk_baslik</h1>
+                                    </a>
+
+                                </div>
+                                <div class="layer-1-1 hidden-sm wow slideInLeft" data-wow-duration="2s" data-wow-delay=".2s">
+                                    <h2 class="title1">@item1.kısa_baslik</h2>
+                                </div>
+                                <div class="layer-1-3 hidden-sm wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                                    <a class="ready-btn page-scroll" href="@item1.resim_yonlendirme">DAHA FAZLA BİLGİ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="our-skill-area fix hidden-sm">
+    <div class="test-overly" style="background-color:white"></div>
+    <div class="skill-bg area-padding-2">
+        <div class="container">
+            <div class="row">
+                <div class="skill-text">
+                    <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                        <div class="single-skill">
+                            <div class="progress-circular">
+                                <input type="text" class="knob" value="0" data-rel="100" data-linecap="round" data-width="140" data-bgcolor="black" data-fgcolor="black" data-thickness=".20" data-readonly="true" disabled>
+                                <a href="OzelSoforluTransfer">
+                                    <h3 style="color:black"><b>@Yolculuk.Resources.AnaText.Saatlik_Transfer</b></h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                        <div class="single-skill">
+                            <div class="progress-circular">
+                                <input type="text" class="knob" value="0" data-rel="85" data-linecap="round" data-width="140" data-bgcolor="black" data-fgcolor="black" data-thickness=".20" data-readonly="true" disabled>
+                                <a href="IstanbulTuru">
+                                    <h3 style="color:black"><b>@Yolculuk.Resources.AnaText.Gunluk_Geziler</b></h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single-skill end -->
+                    <!-- single-skill start -->
+                    <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                        <div class="single-skill">
+                            <div class="progress-circular">
+                                <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="140" data-bgcolor="black" data-fgcolor="black" data-thickness=".20" data-readonly="true" disabled>
+                                <a href="SehirDisiTuru">
+                                    <h3 style="color:black"><b>@Yolculuk.Resources.AnaText.Haftalik_Turlar</b></h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single-skill end -->
+                    <!-- single-skill start -->
+                    <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                        <div class="single-skill">
+                            <div class="progress-circular">
+                                <input type="text" class="knob" value="0" data-rel="65" data-linecap="round" data-width="140" data-bgcolor="black" data-fgcolor="black" data-thickness=".20" data-readonly="true" disabled>
+                                <a href="BusinessTransfer">
+                                    <h3 style="color:black"><b>@Yolculuk.Resources.AnaText.Busines_Transfer</b></h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single-skill end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <a href="IstanbulTuru">
+            <img src="~/Content/img/hizmetler/HizmetlerAnasayfa/istanbul_tur.png" style="width:100%;height:200px" alt="İstanbul Turu" />
+        </a>
+    </div>
+</div>
