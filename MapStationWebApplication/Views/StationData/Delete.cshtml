@@ -1,0 +1,77 @@
+﻿@model StationShowApplication.Models.DataStation
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Template/AdminTemplate.cshtml";
+}
+
+<h3>İstasyonu silmek istediğinize emin misiniz?</h3>
+<div style="text-align:center">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            İstasyon Adı
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.stationName)
+        </dd>
+
+        <dt>
+            Adres
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stationAdres)
+        </dd>
+
+        <dt>
+           İl
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stationCity)
+        </dd>
+
+        <dt>
+           İlçe
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stationCountry)
+        </dd>
+
+        <dt>
+           Telefon
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stationPhone)
+        </dd>
+
+        <dt>
+            Koordinat X
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stationLatX)
+        </dd>
+
+        <dt>
+           Koordinat Y
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stationLatY)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Listeyi Göster", "List")
+        </div>
+    }
+</div>

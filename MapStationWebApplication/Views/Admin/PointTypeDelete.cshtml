@@ -1,0 +1,33 @@
+﻿@model StationShowApplication.Models.StationType
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Template/AdminTemplate.cshtml";
+}
+
+
+<h3>Point türünü silmek istediğinize emin misiniz?</h3>
+<div style="text-align:center">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Point Türü
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stationTypeName)
+        </dd>
+
+        
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Listeyi gör", "PointList")
+        </div>
+    }
+</div>

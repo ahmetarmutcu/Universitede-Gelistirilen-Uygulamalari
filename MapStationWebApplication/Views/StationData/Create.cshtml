@@ -1,0 +1,84 @@
+﻿@model StationShowApplication.Models.DataStation
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Template/AdminTemplate.cshtml";
+}
+
+    <div class="card">
+        <div class="card-header">
+            <strong>İstasyon</strong> Ekleme
+        </div>
+        <div class="card-body card-block">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+               
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <div class="col-md-8">
+                        <label class=" form-control-label">İstasyon Adı</label>
+                        @Html.EditorFor(model => model.stationName, new { htmlAttributes = new { @class = "form-control",autocomplete="off" } })
+                        @Html.ValidationMessageFor(model => model.stationName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class=" form-control-label">İl Adı</label>
+                        @Html.EditorFor(model => model.stationCity, new { htmlAttributes = new { @class = "form-control",autocomplete="off" } })
+                        @Html.ValidationMessageFor(model => model.stationCity, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-8">
+                        <label class=" form-control-label">Adres</label>
+                        @Html.EditorFor(model => model.stationAdres, new { htmlAttributes = new { @class = "form-control",autocomplete="off" } })
+                        @Html.ValidationMessageFor(model => model.stationAdres, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class=" form-control-label">İlçe</label>
+                        @Html.EditorFor(model => model.stationCountry, new { htmlAttributes = new { @class = "form-control",autocomplete="off" } })
+                        @Html.ValidationMessageFor(model => model.stationCountry, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label class=" form-control-label">Telefon</label>
+                        @Html.EditorFor(model => model.stationPhone, new { htmlAttributes = new { @class = "form-control",autocomplete="off" } })
+                        @Html.ValidationMessageFor(model => model.stationPhone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label class=" form-control-label">Koordinat X</label>
+                        @Html.EditorFor(model => model.stationLatX, new { htmlAttributes = new { @class = "form-control",autocomplete="off" } })
+                        @Html.ValidationMessageFor(model => model.stationLatX, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label class=" form-control-label">Koordinat Y</label>
+                        @Html.EditorFor(model => model.stationLatY, new { htmlAttributes = new { @class = "form-control",autocomplete="off" } })
+                        @Html.ValidationMessageFor(model => model.stationLatY, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm" style="margin-top:4%">
+                        <i class="fa fa-dot-circle-o"></i> Ekle
+                    </button>
+                </div>
+            </div>
+            }
+            </div>
+        </div>

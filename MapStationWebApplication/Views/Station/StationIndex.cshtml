@@ -1,0 +1,146 @@
+﻿@{
+    ViewBag.Title = "StationIndex";
+    Layout = "~/Views/Template/StationTemplate.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Harita</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="~/Content/Station/Maps/js/mapbox-gl.js"></script>
+    <link href="~/Content/Station/Maps/css/mapbox-lg.css" rel="stylesheet" />
+    <link href="~/Content/Station/Maps/css/map.css" rel="stylesheet" />
+</head>
+<body>
+    @*<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+          type="text/css" />*@
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <script src="~/Content/Station/Maps/js/drivingDirection.js"></script>
+    <link rel="stylesheet" href="~/Content/Station/Maps/css/drivingDrection.css" type="text/css" />
+    <div id="map">
+        <div class="mapboxgl-ctrl-top-left" style="margin-top:135px">
+            <div alt="İstasyonları Bul" class="mapboxgl-ctrl mapboxgl-ctrl-group"><button onclick="GuzergayaGoreIstasyonBul()">Bul</button></div>
+        </div>
+        @*<div class="mapboxgl-ctrl-top-left" style="margin-top:175px">
+            <div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button onclick="UcBoyutluMapDonustur()"><img src="~/NewMap/img/3d.jpg" style="width:25px;height:25px;" /></button></div>
+        </div>*@
+        <div class="mapboxgl-ctrl-top-left" style="margin-top:175px">
+            <div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button onclick="FindPointsAroundLocation()"><img src="~/Content/Station/Maps/img/konum.png" style="width:25px;height:25px;" /></button></div>
+        </div>
+        <div class="mapboxgl-ctrl-top-left" style="margin-top:215px">
+            <div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button id="sektorBtn"><img src="~/Content/Station/Maps/img/searchIcon.png" style="width:25px;height:25px;" /></button></div>
+        </div>
+        <div class="mapboxgl-ctrl-top-left" style="margin-top:255px">
+            <div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button id="akaryakitBtn"><img src="~/Content/Station/Maps/img/fuelIcon.jpg" style="width:25px;height:25px;" /></button></div>
+        </div>
+        <div id="akaryakitModul">
+            <div class="heading">
+                <span style="float:right" onclick="AkaryakitModulKapat()">X</span>
+                <h6>Akaryakit Türleri</h6>
+            </div>
+            <div id="akaryakitDiv" class="listings">
+            </div>
+        </div>
+
+        <div id="akaryakitModulList">
+            <div class="heading">
+                <span style="float:right" onclick="AkaryakitModulListKapat()">X</span>
+                <h6>BENZİN İSTASYONLARI</h6>
+            </div>
+            <div id="akaryakitListDiv" class="listings">
+            </div>
+        </div>
+
+
+        <div id="rotationSidebar">
+            <div class="heading">
+                <span style="float:right" onclick="BulKapat()">X</span>
+                <h6>Rota Üzerindeki İstasyonlar</h6>
+            </div>
+            <div id="listings" class="listings"></div>
+        </div>
+        <div id="stationFuelPrice">
+            <div class="heading">
+                <span style="float:right" onclick="AkaryakitTablosuKapat()">X</span>
+                <h6 style="text-align:center">İSTASYON AKARYAKIT LİTRE ÜCRETLERİ</h6>
+
+            </div>
+            <div id="akaryakitTablosu"></div>
+        </div>
+        <div id="noktaAnaliz">
+            <div class="heading">
+                <span style="float:right" onclick="noktaPaneliKapat()">X</span>
+                <h6>Sorgulama Paneli</h6>
+            </div>
+            <div id="noktaSorgulama" class="listings" style="height:auto">
+                <input id="catchmentAnalizi" type="button" value="Catchment Analizi" style="width:100%;margin-bottom:5px;background-color:gray" />
+            </div>
+        </div>
+        <div id="catchmentModulu">
+            <div class="heading">
+                <span style="float:right" onclick="catchmentModuluKapat()">X</span>
+                <h6>Catchment Analizi</h6>
+            </div>
+            <div class="listings" style="height:auto">
+                <label>Arama yapılacak mesafeyi(km) giriniz</label><br />
+                <input id="catchmentInput" type="text" style="width:20%;margin-bottom:5px;margin-top:5px;" /><br />
+                <label>Nokta türü seçiniz</label><br />
+                <div id="catchmentSektorler" class="listings" style="height:auto">
+                    <input id="catchmentbenzinIstasyonlari" type="radio" name="rtoggle" value="Benzin İstasyonları" />
+                    <label>Benzinlikler</label><br />
+                    <input id="catchmentrestaurants" type="radio" name="rtoggle" value="Restoranlar" checked="checked" />
+                    <label>Restoranlar</label><br />
+                    <input id="catchmenteczaneler" type="radio" name="rtoggle" value="Eczaneler" />
+                    <label>Eczaneler</label><br />
+                </div>
+                <input id="btnCatchmentAnalizi" type="button" value="Ara" style="float:right" />
+            </div>
+            <div id="catchmentAnaliz" class="listings"></div>
+        </div>
+        <div id="orderSectorSidebar">
+            <div class="heading">
+                <span style="float:right" onclick="orderSectorSidebarClose()">X</span>
+                <h6>Sektörel Noktalar</h6>
+            </div>
+            <div id="sektorler" class="listings" style="height:auto">
+                <input id="tum" type="radio" name="rtoggle" value="Benzin İstasyonları" />
+                <label for="dark">Tümünü göster</label><br />
+                <input id="benzinIstasyonlari" type="radio" name="rtoggle" value="Benzin İstasyonları" />
+                <label for="dark">Benzinlikler</label><br />
+                <input id="restaurants" type="radio" name="rtoggle" value="Restoranlar" checked="checked" />
+                <label for="streets">Restoranlar</label><br />
+                <input id="eczaneler" type="radio" name="rtoggle" value="Eczaneler" />
+                <label for="dark">Eczaneler</label><br />
+            </div>
+        </div>
+        <div class="mapboxgl-ctrl-bottom-left" style="margin-top:135px">
+            <div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button onclick="Katmanlar()"><img src="~/Content/Station/Maps/img/katmanlar.png" style="width:25px;height:25px;" /></button></div>
+        </div>
+        <div id="KatmanWindow">
+            <div class="heading">
+                <span style="float:right" onclick="KatmanKapat()">X</span>
+                <h6>Katmanlar</h6>
+            </div>
+            <div id="katmanlar" class="listings">
+                <input id="streets-v11" type="radio" name="rtoggle" value="Cadde/Sokak" checked="checked" />
+                <label for="streets">Cadde/Sokak</label><br />
+                <input id="light-v10" type="radio" name="rtoggle" value="light" />
+                <label for="light">Light</label><br />
+                <input id="dark-v10" type="radio" name="rtoggle" value="dark" />
+                <label for="dark">Dark</label><br />
+                <input id="outdoors-v11" type="radio" name="rtoggle" value="Açık Hava" />
+                <label for="outdoors">Açık Hava</label><br />
+                <input id="satellite-v9" type="radio" name="rtoggle" value="Uydu" />
+                <label for="satellite">Uydu</label>
+            </div>
+        </div>
+    </div>
+    <script src="~/Content/Station/Maps/js/StationIndex.js" type="text/javascript"></script>
+</body>
+</html>
+

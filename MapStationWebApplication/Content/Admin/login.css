@@ -1,0 +1,387 @@
+﻿#backImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0em;
+    z-index: 0;
+}
+
+.panel-container {
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    margin-top: calc(50vh - 160px);
+}
+
+div {
+    box-sizing: border-box;
+    resize: none;
+    border-color: rgb(170, 170, 170);
+}
+
+div {
+    display: block;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.panel {
+    position: relative;
+    display: inline-block;
+    width: 272px;
+    height: 328px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+}
+
+.panel-logo {
+    margin-top: 10px;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 224px;
+    height: 140px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+.inpUser {
+    top: 160px;
+}
+
+.inpPass {
+    top: 200px;
+}
+
+.inp {
+    position: absolute;
+    font-size: 16px;
+    box-sizing: border-box;
+    line-height: 19px;
+    z-index: 1;
+    width: 224px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    /*background-image: url(images/meta/blank.gif);*/
+    font-family: Roboto, sans-serif;
+    color: rgb(117, 117, 117) !important;
+    padding: 2px 25px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: rgb(79, 79, 79);
+    border-image: initial;
+    border-radius: 4px;
+}
+
+.login-el {
+    left: 24px;
+    right: 24px;
+    font-family: Roboto, sans-serif;
+}
+
+input {
+    font-family: roboto, sans-serif;
+    text-rendering: optimizelegibility;
+    font-size: 10px;
+    border-color: rgb(170, 170, 170);
+}
+
+    input[type="password" i] {
+        -webkit-text-security: disc !important;
+    }
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: -internal-light-dark-color(white, black);
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+.login-submit:hover {
+    background: rgb(229, 72, 0);
+    text-decoration: none;
+}
+
+.login-submit {
+    left: 24px;
+    right: 24px;
+    position: absolute;
+    top: 248px;
+    cursor: pointer;
+    z-index: 9000;
+    color: rgb(255, 255, 255);
+    height: 32px;
+    width: 224px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px !important;
+    border-radius: 4px;
+    background-color: orangered;
+    padding: 5.5px;
+    text-decoration: none;
+    margin: 0em;
+    word-spacing: normal;
+    border: none;
+}
+
+.login-el {
+    left: 24px;
+    right: 24px;
+    font-family: Roboto, sans-serif;
+}
+
+.lp {
+    position: absolute;
+    top: 296px;
+    width: 89px;
+    height: 14px;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: Roboto, sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.register {
+    position: absolute;
+    top: 296px;
+    height: 14px;
+    width: 89px;
+    text-align: right;
+    right: 24px;
+    left: auto;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: Roboto, sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.login-footer {
+    text-align: center;
+    width: 100%;
+    height: 13px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    line-height: 13px;
+    bottom: 25px;
+    font-family: Arial;
+}
+
+.dlgVP {
+    position: absolute;
+    font-family: Arial;
+    text-align: left;
+    line-height: 0px;
+    overflow: visible;
+    border-radius: 10px;
+}
+
+.mbox {
+    width: 300px;
+}
+
+.dlgTB {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.dlgID {
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+}
+
+td.dlgID.dlgCenter {
+    width: 100% !important;
+}
+
+.mbox .dlgCenter {
+    padding-bottom: 0px;
+}
+
+.dlgCenter {
+    font-size: 12px;
+    line-height: normal;
+    padding-bottom: 6px;
+    background-repeat: repeat;
+}
+
+.mboxTable {
+    table-layout: fixed;
+    position: relative;
+    width: 100%;
+}
+
+.mbox .mboxC1 {
+    background: rgb(255, 255, 255) !important;
+}
+
+.mboxC1 {
+    width: 75px;
+    text-align: center;
+    vertical-align: middle;
+    background: rgb(102, 102, 102);
+}
+
+.mboxImg {
+    width: 64px;
+    height: 64px;
+    margin: 10px auto;
+}
+
+.mbox .mboxC2 {
+    background-color: rgb(219, 68, 55) !important;
+}
+
+.mboxC2 {
+    text-align: center;
+    vertical-align: middle;
+    width: 225px;
+}
+
+.mbox .mboxC2 .mboxMsg {
+    line-height: 16px;
+    color: rgb(255, 255, 255);
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+}
+
+.mboxMsg {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    color: rgb(255, 255, 255);
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.mboxC3 {
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+}
+
+.mbox .mboxDiv {
+    background-color: rgb(219, 68, 55) !important;
+}
+
+.mboxDiv {
+    height: 44px;
+}
+
+.mboxSpan {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.mbox .mboxDiv .mboxIcon {
+    float: right;
+    height: 16px;
+    width: 13px;
+    margin-right: 8px;
+    margin-top: 8px;
+    content: url(../images/themes/dark/redok.png) !important;
+}
+
+.mboxIcon {
+    vertical-align: middle;
+}
+
+.mbox .mboxDiv .mboxIcon {
+    float: right;
+    height: 16px;
+    width: 13px;
+    margin-right: 8px;
+    margin-top: 8px;
+    content: url(../Admin/img/window/redok.png) !important;
+}
+
+.mboxIcon {
+    vertical-align: middle;
+}
+
+.mbox .mboxC1 > img {
+    content: url(../Admin/img/window/red0.png) !important;
+}
+
+.mboxImg {
+    width: 64px;
+    height: 64px;
+    margin: 10px auto;
+}
+
+.mbox .mboxC2 .mboxMsg {
+    line-height: 16px;
+    color: rgb(255, 255, 255);
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+}
+
+.mboxMsg {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    color: rgb(255, 255, 255);
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+span {
+    box-sizing: border-box;
+    cursor: default;
+    font-family: roboto, sans-serif;
+    text-rendering: optimizelegibility;
+}

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CBS İSTASYON UYGULAMASI</title>
+    <link href="~/Content/Home/style.css" rel="stylesheet">
+    <link href="~/Content/Home/css/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header_area animated">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-10">
+                    <div class="menu_area">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="#home">CBSSA.</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                            <div class="collapse navbar-collapse" id="ca-navbar">
+                                <ul class="navbar-nav ml-auto" id="nav">
+                                    <li class="nav-item active"><a class="nav-link" href="#home">AnaSayfa</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#about">CBSSA. nasıl kullanılır</a></li>
+                                    <li class="nav-item">@Html.ActionLink("Kullanmak İstiyorum", "StationIndex",     "Station", null, new { @class = "nav-link" })</li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+
+    <footer class="footer-social-icon text-center section_padding_70 clearfix">
+        <div class="copyright-text">
+            <p>Copyright ©2020 CBSSA. Designed by <a href="https://colorlib.com" target="_blank">Ahmet Armutcu</a></p>
+        </div>
+    </footer>
+    <script src="~/Content/Home/js/jquery-2.2.4.min.js"></script>
+    <script src="~/Content/Home/js/popper.min.js"></script>
+    <script src="~/Content/Home/js/bootstrap.min.js"></script>
+    <script src="~/Content/Home/js/plugins.js"></script>
+    <script src="~/Content/Home/js/slick.min.js"></script>
+    <script src="~/Content/Home/js/footer-reveal.min.js"></script>
+    <script src="~/Content/Home/js/active.js"></script>
+</body>
+
+</html>
