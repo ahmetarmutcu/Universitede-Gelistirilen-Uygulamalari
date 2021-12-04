@@ -1,0 +1,9 @@
+D:\OtoparkSimulasyonProject\bin\Debug\OtoparkSimulasyonProject.exe.config
+D:\OtoparkSimulasyonProject\bin\Debug\OtoparkSimulasyonProject.exe
+D:\OtoparkSimulasyonProject\bin\Debug\OtoparkSimulasyonProject.pdb
+D:\OtoparkSimulasyonProject\obj\Debug\OtoparkSimulasyonProject.csprojAssemblyReference.cache
+D:\OtoparkSimulasyonProject\obj\Debug\OtoparkSimulasyonProject.Properties.Resources.resources
+D:\OtoparkSimulasyonProject\obj\Debug\OtoparkSimulasyonProject.csproj.GenerateResource.cache
+D:\OtoparkSimulasyonProject\obj\Debug\OtoparkSimulasyonProject.exe
+D:\OtoparkSimulasyonProject\obj\Debug\OtoparkSimulasyonProject.pdb
+D:\OtoparkSimulasyonProject\obj\Debug\OtoparkSimulasyonProject.Form1.resources
