@@ -1,0 +1,15 @@
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\bin\Debug\OtogaleriOtomasyon.exe.config
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\bin\Debug\OtogaleriOtomasyon.exe
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\bin\Debug\OtogaleriOtomasyon.pdb
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.csprojResolveAssemblyReference.cache
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.Form1.resources
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.Properties.Resources.resources
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.csproj.GenerateResource.Cache
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.exe
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.pdb
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.Giris.resources
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.AraclarSayfasi.resources
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.MusteriSayfa.resources
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.CalisanlarSayfasi.resources
+C:\Users\PC\source\repos\OtogaleriOtomasyon\OtogaleriOtomasyon\obj\Debug\OtogaleriOtomasyon.Gelir_Gider.resources

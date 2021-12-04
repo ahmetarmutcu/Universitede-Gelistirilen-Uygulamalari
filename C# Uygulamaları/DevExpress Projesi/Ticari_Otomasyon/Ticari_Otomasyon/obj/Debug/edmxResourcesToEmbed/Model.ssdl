@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DboTicariOtomasyonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_MUSTERILER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD" Type="varchar" MaxLength="20" />
+    <Property Name="SOYAD" Type="varchar" MaxLength="30" />
+    <Property Name="TELEFON" Type="varchar" MaxLength="15" />
+    <Property Name="TELEFON2" Type="varchar" MaxLength="15" />
+    <Property Name="TC" Type="char" MaxLength="11" />
+    <Property Name="MAİL" Type="varchar" MaxLength="40" />
+    <Property Name="IL" Type="varchar" MaxLength="13" />
+    <Property Name="ILCE" Type="varchar" MaxLength="20" />
+    <Property Name="ADRES" Type="varchar" MaxLength="100" />
+    <Property Name="VERGİDAIRE" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="DboTicariOtomasyonModelStoreContainer">
+    <EntitySet Name="TBL_MUSTERILER" EntityType="Self.TBL_MUSTERILER" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

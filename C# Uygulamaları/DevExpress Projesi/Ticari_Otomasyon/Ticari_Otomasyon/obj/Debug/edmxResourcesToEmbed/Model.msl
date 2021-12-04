@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DboTicariOtomasyonModelStoreContainer" CdmEntityContainer="DboTicariOtomasyonEntities">
+    <EntitySetMapping Name="TBL_MUSTERILER">
+      <EntityTypeMapping TypeName="DboTicariOtomasyonModel.TBL_MUSTERILER">
+        <MappingFragment StoreEntitySet="TBL_MUSTERILER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+          <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
+          <ScalarProperty Name="TELEFON2" ColumnName="TELEFON2" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="MAİL" ColumnName="MAİL" />
+          <ScalarProperty Name="IL" ColumnName="IL" />
+          <ScalarProperty Name="ILCE" ColumnName="ILCE" />
+          <ScalarProperty Name="ADRES" ColumnName="ADRES" />
+          <ScalarProperty Name="VERGİDAIRE" ColumnName="VERGİDAIRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DboTicariOtomasyonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBL_MUSTERILER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SOYAD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFON" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFON2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="MAİL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="IL" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="ILCE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ADRES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VERGİDAIRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DboTicariOtomasyonEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBL_MUSTERILER" EntityType="Self.TBL_MUSTERILER" />
+  </EntityContainer>
+</Schema>
