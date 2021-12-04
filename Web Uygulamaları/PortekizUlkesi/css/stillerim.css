@@ -1,0 +1,165 @@
+.HaberDuyuru-card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color:greenyellow;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+  .card-baslik {
+    text-align: center;/*yazıyı ortalama*/
+    color:rebeccapurple;/*yazı rengini*/
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+.sliderbaslik
+{
+  color:crimson;
+  font: bold;
+}
+.slider-p
+{
+  color:cyan;
+  font:bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20pt;
+}
+.a_link
+{
+  text-align: center;
+  color:blue;
+  font:bold;
+  
+}
+.card-bilgi
+{
+  font-family: Arial, Helvetica, sans-serif;
+  color:gray;
+}
+.ana_baslik,h3
+{
+  margin-top:1%;
+  color:orange;
+  font: bold;
+}
+.yemek_baslik
+{
+  color:red;
+  font:bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top:1%;
+  margin-bottom:1%;
+}
+.image_slider_wrapper{
+  position: relative;
+  width: 1000;
+  height: 550px;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.image_slider_left{
+  display: none;
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+.image_slider_left img{
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+.image_slider_right{
+  display: none;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+.image_slider_right img{
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+.image_slider_body{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.image_slider_body_content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.image_slider_body_container{
+  position: relative;
+  height: 100%;
+}
+.image_slider_element{
+  position: relative;
+  float: left;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image_slider_pager{
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  height: 15px;
+}
+.image_slider_pager_element{
+  position: relative;
+  opacity: 0.3;
+  float: left;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin-right: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.image_slider_pager_element:hover{
+  opacity: 1;
+}
+.image_slider_pager_element_active{
+  opacity: 1;
+}
+.image_slider_pager .image_slider_pager_element:last-child{
+  margin-right: 0;
+}
+.artan {
+  background: url(yukari.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.azalan {
+  background: url(asagi.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+}

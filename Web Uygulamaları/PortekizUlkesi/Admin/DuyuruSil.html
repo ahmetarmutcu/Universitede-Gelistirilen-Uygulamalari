@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Duyuru Sil</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="Admin.html">Admin Paneli</a><span class="nav-link-text" style="margin-left: 80%"><a href="../index.html" style="color:red">ÇIKIŞ</a></span>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-file"></i>
+              <span class="nav-link-text">Haberler</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+              <li>
+                <a href="HaberEkle.html">Haber Ekle</a>
+              </li>
+              <li>
+                <a href="HaberSil.html">Haber Sil</a>
+              </li>
+              <li>
+                <a href="HaberDuzenle.html">Haber Düzenle</a>
+              </li>
+              <li>
+                <a href="HaberListele.html">Haberleri Listele</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages1" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-file"></i>
+              <span class="nav-link-text">Duyurular</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseExamplePages1">
+              <li>
+                <a href="DuyuruEkle.html">Duyuru Ekle</a>
+              </li>
+              <li>
+                <a href="DuyuruSil.html">Duyuru Sil</a>
+              </li>
+              <li>
+                <a href="DuyuruDuzenle.html">Duyuru Düzenle</a>
+              </li>
+              <li>
+                <a href="DuyuruListele.html">Duyurular Listesi</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages2" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-file"></i>
+              <span class="nav-link-text">Üyeler</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseExamplePages2">
+              <li>
+                <a href="UyeEkle.html">Uye Ekle</a>
+              </li>
+              <li>
+                <a href="UyeSil.html">Uye Sil</a>
+              </li>
+              <li>
+                <a href="UyeDuzenle.html">Uye Düzenle</a>
+              </li>
+              <li>
+                  <a href="UyeListele.html">Uye Listele</a>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="form-container">
+            <h2 style="text-align: center;color:red;margin-top:3%">Duyuru Sil</h2>
+            <div class="form-card card-register mx-auto mt-4">
+                <div class="card-body">
+                    <form name="uye_formu" method="post">
+                        <div class="form-group">
+                            <label>Duyuru ID</label>
+                            <p style="color:red">Ornek DuyuruID</p>
+
+                        </div>
+                        <div class="form-group">
+                            <label>Duyuru Adı</label>
+                            <p style="color:red">Ornek DuyuruAdı</p>
+
+                        </div>
+                        <div class="form-group">
+                            <label>Duyuru İçerik</label>
+                            <p style="color:red">Ornek Duyuruİçerik</p>
+
+                        </div>
+                        <div class="form-group">
+                            <label>Duyuru Tarihi</label>
+                            <p style="color:red">Ornek DuyuruTarih</p>
+
+                        </div>
+                        
+                        <input type="submit" name="uyeekle" style="float: right;" class="btn btn-danger btn-block" value="Sil">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        </div>
+        <footer class="sticky-footer">
+          <div class="container">
+            <div class="text-center">
+              <small>Copyright © Your Website 2018</small>
+            </div>
+          </div>
+        </footer>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap4.js"></script>
+    <script src="js/sb-admin.min.js"></script>
+    <script src="js/sb-admin-datatables.min.js"></script>
+    <script src="js/sb-admin-charts.min.js"></script>
+    </div>
+</body>
+
+</html>to
